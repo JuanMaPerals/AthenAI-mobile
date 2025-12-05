@@ -1,0 +1,586 @@
+{
+  "@@locale": "en",
+  "appTitle": "PersalOne",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "brandMainTagline": "AI that protects your online decisions. You set the limits.",
+  "brandHeroSubtitle": "PersalOne reviews important links, charges and logins with you. Behind it is a team led by Juan Ma Perals that turns advanced AI into clear, actionable recommendations.",
+  "agentHeroTitle": "Your trusted agent for your online life",
+  "brandTeamTagline": "Calm digital hygiene for your team",
+  "homeTitle": "My security status",
+  "@homeTitle": {
+    "description": "Home page main title"
+  },
+  "homeHeroTitle": "AI that protects your online decisions. You set the limits.",
+  "@homeHeroTitle": {
+    "description": "Home page hero title"
+  },
+  "homeHeroSubtitle": "PersalOne reviews important links, charges and logins with you. Behind it is a team led by Juan Ma Perals that turns advanced AI into clear, actionable recommendations.",
+  "@homeHeroSubtitle": {
+    "description": "Home page hero subtitle"
+  },
+  "homeTalkToAgent": "Talk to my AI agent",
+  "@homeTalkToAgent": {
+    "description": "Button to open agent chat"
+  },
+  "homeViewPlans": "View plans and pricing",
+  "@homeViewPlans": {
+    "description": "Button to view pricing plans"
+  },
+  "homeBasicChecklist": "Basic security checklist",
+  "@homeBasicChecklist": {
+    "description": "Button for basic security checklist"
+  },
+  "homeBetaMessage": "Your dashboard is in beta mode. It's not connected to all your sources yet, but you can already talk to your AI agent and follow a basic checklist.",
+  "@homeBetaMessage": {
+    "description": "Beta status message on home page"
+  },
+  "homeQuickActions": "Quick actions",
+  "@homeQuickActions": {
+    "description": "Quick actions section title"
+  },
+  "homeFooterNote": "Technical beta version. Some features are still in testing and may change.",
+  "@homeFooterNote": {
+    "description": "Footer message explaining that the app is in technical beta"
+  },
+  "homeHelpTodayTitle": "We can help you today with…",
+  "@homeHelpTodayTitle": {
+    "description": "Home page help section title"
+  },
+  "homeScenarioScamsTitle": "Suspicious messages and scams",
+  "@homeScenarioScamsTitle": {
+    "description": "Scam scenario card title"
+  },
+  "homeScenarioScamsSubtitle": "We'll review SMS, emails or strange messages with you before you click anything.",
+  "@homeScenarioScamsSubtitle": {
+    "description": "Scam scenario card subtitle"
+  },
+  "homeScenarioPasswordsTitle": "Passwords and access",
+  "@homeScenarioPasswordsTitle": {
+    "description": "Passwords scenario card title"
+  },
+  "homeScenarioPasswordsSubtitle": "We help you organize your passwords and choose safer options without stress.",
+  "@homeScenarioPasswordsSubtitle": {
+    "description": "Passwords scenario card subtitle"
+  },
+  "homeScenarioDeviceTitle": "Slow or strange phone",
+  "@homeScenarioDeviceTitle": {
+    "description": "Device issues scenario card title"
+  },
+  "homeScenarioDeviceSubtitle": "If your phone is slow or acting strange, we'll guide you step by step to check it.",
+  "@homeScenarioDeviceSubtitle": {
+    "description": "Device issues scenario card subtitle"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings menu item"
+  },
+  "settingsAccessibility": "Accessibility",
+  "@settingsAccessibility": {
+    "description": "Accessibility section title"
+  },
+  "settingsLargeText": "Large text",
+  "@settingsLargeText": {
+    "description": "Large text accessibility option"
+  },
+  "settingsLargeTextSubtitle": "Increase text size throughout the app",
+  "@settingsLargeTextSubtitle": {
+    "description": "Large text subtitle"
+  },
+  "settingsHighContrast": "High contrast",
+  "@settingsHighContrast": {
+    "description": "High contrast accessibility option"
+  },
+  "settingsHighContrastSubtitle": "Improve visibility with higher contrast colors",
+  "@settingsHighContrastSubtitle": {
+    "description": "High contrast subtitle"
+  },
+  "settingsEasyReading": "Easy reading mode",
+  "@settingsEasyReading": {
+    "description": "Easy reading mode accessibility option"
+  },
+  "settingsEasyReadingSubtitle": "Reduce visual elements and simplify layout",
+  "@settingsEasyReadingSubtitle": {
+    "description": "Easy reading subtitle"
+  },
+  "settingsInfoMessage": "Accessibility settings will be applied in future versions. For now, this screen only demonstrates the functionality.",
+  "@settingsInfoMessage": {
+    "description": "Settings info card message"
+  },
+  "settingsWhatCanDoTitle": "What PersalOne can do",
+  "@settingsWhatCanDoTitle": {
+    "description": "Settings section title for capabilities"
+  },
+  "settingsWhatCanDoIntro": "So you can use PersalOne with peace of mind, this is what it can do and what it cannot.",
+  "@settingsWhatCanDoIntro": {
+    "description": "Intro text for capabilities section"
+  },
+  "settingsWhatCanDoCanTitle": "Can help you:",
+  "@settingsWhatCanDoCanTitle": {
+    "description": "Title for what PersalOne can do list"
+  },
+  "settingsWhatCanDoCanItem1": "Understand messages or emails that raise doubts.",
+  "@settingsWhatCanDoCanItem1": {
+    "description": "First item in can-do list"
+  },
+  "settingsWhatCanDoCanItem2": "Decide what steps to take when something seems off.",
+  "@settingsWhatCanDoCanItem2": {
+    "description": "Second item in can-do list"
+  },
+  "settingsWhatCanDoCanItem3": "Learn gradually to navigate with more security.",
+  "@settingsWhatCanDoCanItem3": {
+    "description": "Third item in can-do list"
+  },
+  "settingsWhatCanDoCannotTitle": "Cannot:",
+  "@settingsWhatCanDoCannotTitle": {
+    "description": "Title for what PersalOne cannot do list"
+  },
+  "settingsWhatCanDoCannotItem1": "Access your accounts or change anything for you.",
+  "@settingsWhatCanDoCannotItem1": {
+    "description": "First item in cannot-do list"
+  },
+  "settingsWhatCanDoCannotItem2": "It does not replace the police, your bank or official emergency services.",
+  "@settingsWhatCanDoCannotItem2": {
+    "description": "Settings bullet: service limits"
+  },
+  "settingsWhatCanDoCannotItem3": "It is not a tool to spy on someone else's phone or to monitor others without their consent.",
+  "@settingsWhatCanDoCannotItem3": {
+    "description": "Settings bullet: not for spying on other phones"
+  },
+  "pricingTitle": "Plans and pricing",
+  "@pricingTitle": {
+    "description": "Title for the PersalOne pricing screen"
+  },
+  "pricingDisclaimer": "We're still in beta. Prices are examples. We will never charge you without telling you first and getting your permission.",
+  "@pricingDisclaimer": {
+    "description": "Pricing disclaimer message"
+  },
+  "pricingIndividualSectionTitle": "For you",
+  "@pricingIndividualSectionTitle": {
+    "description": "Individual plans section title"
+  },
+  "pricingIndividualFreeTitle": "PersalOne Free",
+  "@pricingIndividualFreeTitle": {
+    "description": "Free plan title"
+  },
+  "pricingIndividualFreeSubtitle": "A calm way to start: no rush, no payments, and help when the digital stuff feels overwhelming.",
+  "@pricingIndividualFreeSubtitle": {
+    "description": "Free plan subtitle"
+  },
+  "pricingIndividualAllyTitle": "PersalOne Ally",
+  "@pricingIndividualAllyTitle": {
+    "description": "Ally plan title"
+  },
+  "pricingIndividualAllySubtitle": "More day-to-day support with clear, simple steps and no tech jargon.",
+  "@pricingIndividualAllySubtitle": {
+    "description": "Ally plan subtitle"
+  },
+  "pricingTeamSectionTitle": "For your team",
+  "@pricingTeamSectionTitle": {
+    "description": "Team plans section title"
+  },
+  "pricingTeamStartTitle": "PersalOne Team Start",
+  "@pricingTeamStartTitle": {
+    "description": "Team Start plan title"
+  },
+  "pricingTeamStartSubtitle": "For small teams who want healthier digital habits without extra complexity.",
+  "@pricingTeamStartSubtitle": {
+    "description": "Team Start plan subtitle"
+  },
+  "pricingTeamGuardTitle": "PersalOne Team Guard",
+  "@pricingTeamGuardTitle": {
+    "description": "Team Guard plan title"
+  },
+  "pricingTeamGuardSubtitle": "More visibility into risks and important company links.",
+  "@pricingTeamGuardSubtitle": {
+    "description": "Team Guard plan subtitle"
+  },
+  "pricingTeamShieldTitle": "PersalOne Team Shield",
+  "@pricingTeamShieldTitle": {
+    "description": "Team Shield plan title"
+  },
+  "pricingTeamShieldSubtitle": "For small businesses with more advanced needs to care for their people's digital life.",
+  "@pricingTeamShieldSubtitle": {
+    "description": "Team Shield plan subtitle"
+  },
+  "pricingBetaLabel": "Beta",
+  "@pricingBetaLabel": {
+    "description": "Beta label for pricing"
+  },
+  "pricingBetaDisclaimerTitle": "We're in beta",
+  "@pricingBetaDisclaimerTitle": {
+    "description": "Beta disclaimer title"
+  },
+  "pricingBetaDisclaimerBody": "Plans and prices are for testing. We will never charge you without telling you first and asking for your clear confirmation.",
+  "@pricingBetaDisclaimerBody": {
+    "description": "Beta disclaimer body text"
+  },
+  "pricingForIndividuals": "For individuals",
+  "@pricingForIndividuals": {
+    "description": "Individual plans section title"
+  },
+  "pricingForIndividualsSubtitle": "Protect your personal digital life",
+  "@pricingForIndividualsSubtitle": {
+    "description": "Individual plans subtitle"
+  },
+  "pricingForBusiness": "For teams and businesses",
+  "@pricingForBusiness": {
+    "description": "Business plans section title"
+  },
+  "pricingForBusinessSubtitle": "Scalable protection for your organization",
+  "@pricingForBusinessSubtitle": {
+    "description": "Business plans subtitle"
+  },
+  "pricingPopular": "Popular",
+  "@pricingPopular": {
+    "description": "Popular plan badge"
+  },
+  "agentTitle": "Your trusted person for all things digital",
+  "@agentTitle": {
+    "description": "Agent page title"
+  },
+  "agentIntro": "Tell us what you see on the screen, what message you received or what's worrying you. We'll give you clear steps in language that actually makes sense to you.",
+  "@agentIntro": {
+    "description": "Agent page intro text"
+  },
+  "agentInputPlaceholder": "How can I help you?",
+  "@agentInputPlaceholder": {
+    "description": "Agent input field placeholder"
+  },
+  "agentWelcomeMessage": "Hello! I'm your digital security ally.\\n\\nI'm here to help you understand and improve your online security in simple, non-technical terms.\\n\\nYou can ask me about:\\n• Passwords and secure accounts\\n• Detecting suspicious emails or messages\\n• Protecting your devices\\n• Using the internet more safely\\n\\nHow can I help you today?",
+  "@agentWelcomeMessage": {
+    "description": "Agent welcome message"
+  },
+  "agentRetry": "Retry",
+  "@agentRetry": {
+    "description": "Retry button label"
+  },
+  "agentErrorNetwork": "We couldn't connect to the server. Check your internet connection and try again.",
+  "@agentErrorNetwork": {
+    "description": "Network/backend unreachable error message"
+  },
+  "agentErrorTimeout": "There was a temporary problem processing your request. Please try again in a few seconds.",
+  "@agentErrorTimeout": {
+    "description": "Timeout/transient error message"
+  },
+  "agentErrorUnexpected": "An unexpected error occurred. If it happens again, please let us know so we can look into it.",
+  "@agentErrorUnexpected": {
+    "description": "Unexpected error message"
+  },
+  "agentChipSuspiciousMessage": "I received a suspicious message",
+  "@agentChipSuspiciousMessage": {
+    "description": "Agent suggestion chip for suspicious messages"
+  },
+  "agentChipBankEmail": "I don't understand an email from the bank",
+  "@agentChipBankEmail": {
+    "description": "Agent suggestion chip for bank emails"
+  },
+  "agentChipPasswords": "I want to review my passwords",
+  "@agentChipPasswords": {
+    "description": "Agent suggestion chip for passwords"
+  },
+  "agentChipHacked": "I think I've been hacked, what should I do?",
+  "@agentChipHacked": {
+    "description": "Suggestion chip for when the user thinks they may have been hacked"
+  },
+  "checklistNotAvailable": "Checklist not yet available in this version.",
+  "@checklistNotAvailable": {
+    "description": "Checklist not available message"
+  },
+  "loginTitle": "Access your PersalOne agent",
+  "@loginTitle": {
+    "description": "Login page title"
+  },
+  "loginSubtitle": "Your AI agent to review messages, charges and logins you’re not sure about.",
+  "@loginSubtitle": {
+    "description": "Subtitle on the login page explaining the purpose in a calm, friendly tone"
+  },
+  "networkErrorMessage": "I can’t connect right now. It’s not your fault—check your connection or try again in a few minutes.",
+  "loginEmailLabel": "Email",
+  "@loginEmailLabel": {
+    "description": "Email input label"
+  },
+  "loginPasswordLabel": "Password",
+  "@loginPasswordLabel": {
+    "description": "Password input label"
+  },
+  "loginButton": "Sign in",
+  "@loginButton": {
+    "description": "Login button label"
+  },
+  "loginErrorRequired": "Email and password are required.",
+  "@loginErrorRequired": {
+    "description": "Error when email or password is empty"
+  },
+  "loginErrorGeneric": "We couldn't sign you in. Please check your details and try again.",
+  "@loginErrorGeneric": {
+    "description": "Generic login error message"
+  },
+  "loginErrorSessionExpired": "Your session has expired. Please sign in again.",
+  "@loginErrorSessionExpired": {
+    "description": "Session expired error message"
+  },
+  "loginDemoMode": "Try PersalOne in demo mode (offline)",
+  "@loginDemoMode": {
+    "description": "Demo/offline mode button label"
+  },
+  "homeScenarioDeviceSlowSubtitle": "My phone is slow or behaves strangely",
+  "@homeScenarioDeviceSlowSubtitle": {
+    "description": "Device scenario third card navigation message"
+  },
+  "settingsProfileSectionTitle": "Your PersalOne profile",
+  "@settingsProfileSectionTitle": {
+    "description": "Profile section title in settings"
+  },
+  "settingsProfileNameLabel": "Name",
+  "@settingsProfileNameLabel": {
+    "description": "Name label in profile section"
+  },
+  "settingsProfileEmailLabel": "Email",
+  "@settingsProfileEmailLabel": {
+    "description": "Email label in profile section"
+  },
+  "settingsProfilePlanLabel": "Current plan",
+  "@settingsProfilePlanLabel": {
+    "description": "Plan label in profile section"
+  },
+  "settingsProfilePlanFree": "Free (starter plan)",
+  "@settingsProfilePlanFree": {
+    "description": "Free plan display name"
+  },
+  "settingsProfileLoading": "Loading your profile…",
+  "@settingsProfileLoading": {
+    "description": "Loading message for profile section"
+  },
+  "settingsProfileError": "We couldn't load your profile right now. You can still use PersalOne as usual.",
+  "@settingsProfileError": {
+    "description": "Error message for profile section"
+  },
+  "settingsOnboardingTitle": "Adjust how we help you (onboarding)",
+  "@settingsOnboardingTitle": {
+    "description": "Settings menu item for onboarding"
+  },
+  "onboardingTitle": "Welcome to PersalOne",
+  "@onboardingTitle": {
+    "description": "Onboarding page title"
+  },
+  "onboardingIntro": "Let's personalize your experience to help you better.",
+  "@onboardingIntro": {
+    "description": "Onboarding page intro text"
+  },
+  "onboardingQuestionWho": "Who are you using PersalOne for?",
+  "@onboardingQuestionWho": {
+    "description": "Question asking who the user is using the app for"
+  },
+  "onboardingOptionSelf": "For me",
+  "@onboardingOptionSelf": {
+    "description": "Option for self use"
+  },
+  "onboardingOptionFamily": "For a family member",
+  "@onboardingOptionFamily": {
+    "description": "Option for family use"
+  },
+  "onboardingOptionTeam": "For my team or company",
+  "@onboardingOptionTeam": {
+    "description": "Option for team use"
+  },
+  "onboardingQuestionStyle": "How would you like us to explain things?",
+  "@onboardingQuestionStyle": {
+    "description": "Question asking for explanation style preference"
+  },
+  "onboardingOptionStepByStep": "Step by step and slowly",
+  "@onboardingOptionStepByStep": {
+    "description": "Option for step-by-step explanation"
+  },
+  "onboardingOptionConcise": "Short and direct summaries",
+  "@onboardingOptionConcise": {
+    "description": "Option for concise explanation"
+  },
+  "onboardingBtnNext": "Next",
+  "@onboardingBtnNext": {
+    "description": "Next button label"
+  },
+  "onboardingBtnSave": "Save",
+  "@onboardingBtnSave": {
+    "description": "Save button label"
+  },
+  "onboardingBtnCancel": "Cancel",
+  "@onboardingBtnCancel": {
+    "description": "Cancel button label"
+  },
+  "landingOverwhelmedTitle": "Designed to help you make informed online decisions",
+  "landingOverwhelmedDesc": "Ideal for people and teams who want to better understand what is behind messages, charges and logins without becoming tech experts. PersalOne gives you context, organises information and proposes concrete, tailored steps.",
+  "aboutTeamTitle": "Who is behind PersalOne",
+  "aboutTeamCreatorHeading": "Created and led by Juan Ma Perals",
+  "aboutTeamCreatorBody": "PersalOne is not an anonymous experiment. It is created and led by Juan Ma Perals and a team that has spent years helping people and organisations make better digital decisions. Our job is to translate technology and cybersecurity into something you can use in your everyday life.",
+  "aboutTeamValuesTitle": "What you can expect from us",
+  "aboutTeamValuesItem1": "Rigour: every recommendation is based on professional judgement.",
+  "aboutTeamValuesItem2": "Respect: we never treat anyone as if they “know too little”.",
+  "aboutTeamValuesItem3": "Transparency: we explain clearly what we do and what we do NOT do with your data.",
+  "landingProtectTitle": "How PersalOne protects you",
+  "landingProtectDetectTitle": "Detect",
+  "landingProtectDetectBody": "We analyse the links, messages and charges you share with us. We recognise fraud patterns, impersonation and dubious practices that often go unnoticed.",
+  "landingProtectWarnTitle": "Warn",
+  "landingProtectWarnBody": "Before you click or confirm a payment, we help you see the risks, explain why and propose clear options: go ahead, stop or ask for more context.",
+  "landingProtectNeutraliseTitle": "Neutralise (advanced plans)",
+  "landingProtectNeutraliseBody": "In paid versions, PersalOne will help you block domains, report abuse and apply technical measures to reduce risk on your devices and accounts.",
+  "landingAdaptTitle": "Protection that adapts to you",
+  "landingAdaptBody": "You choose how far you want PersalOne to go with you: occasional alerts, more proactive follow-up or advanced protection for your team. You can pick the topics you care most about and whether you prefer detailed explanations or direct summaries.",
+  "landingAdaptBullet1": "You decide what you want it to pay closer attention to.",
+  "landingAdaptBullet2": "You set the tone: more detail or just the essentials.",
+  "landingAdaptBullet3": "You can change your preferences at any time.",
+  "settingsProfilePlanLabel": "Current plan",
+  "@settingsProfilePlanLabel": {
+    "description": "Plan label in profile section"
+  },
+  "settingsProfilePlanFree": "Free (starter plan)",
+  "@settingsProfilePlanFree": {
+    "description": "Free plan display name"
+  },
+  "settingsProfileLoading": "Loading your profile…",
+  "@settingsProfileLoading": {
+    "description": "Loading message for profile section"
+  },
+  "onboardingIntro": "Set up your experience so PersalOne can help you better.",
+  "@onboardingIntro": {
+    "description": "Onboarding page intro text"
+  },
+  "onboardingQuestionWho": "Who are you using PersalOne for?",
+  "@onboardingQuestionWho": {
+    "description": "Question asking who the user is using the app for"
+  },
+  "onboardingOptionSelf": "For myself",
+  "@onboardingOptionSelf": {
+    "description": "Option for self use"
+  },
+  "onboardingOptionFamily": "For a family member",
+  "@onboardingOptionFamily": {
+    "description": "Option for family use"
+  },
+  "onboardingOptionTeam": "For my team or company",
+  "@onboardingOptionTeam": {
+    "description": "Option for team use"
+  },
+  "onboardingQuestionStyle": "How do you prefer explanations?",
+  "@onboardingQuestionStyle": {
+    "description": "Question asking for explanation style preference"
+  },
+  "onboardingOptionStepByStep": "Very step-by-step and slow",
+  "@onboardingOptionStepByStep": {
+    "description": "Option for step-by-step explanation"
+  },
+  "onboardingOptionConcise": "Short and direct summaries",
+  "@onboardingOptionConcise": {
+    "description": "Option for concise explanation"
+  },
+  "onboardingBtnNext": "Next",
+  "@onboardingBtnNext": {
+    "description": "Next button label"
+  },
+  "onboardingBtnSave": "Save",
+  "@onboardingBtnSave": {
+    "description": "Save button label"
+  },
+  "onboardingBtnCancel": "Cancel",
+  "@onboardingBtnCancel": {
+    "description": "Cancel button label"
+  },
+  "homeScenarioPasswordsTitle": "Passwords and access",
+  "@homeScenarioPasswordsTitle": {
+    "description": "Passwords scenario card title"
+  },
+  "onboardingTitle": "Set how you want PersalOne to help you",
+  "@onboardingTitle": {
+    "description": "Title of the onboarding page"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings page title"
+  },
+  "settingsOnboardingTitle": "Adjust how PersalOne helps you",
+  "@settingsOnboardingTitle": {
+    "description": "Title for onboarding settings section"
+  },
+  "settingsAccessibility": "Accessibility",
+  "@settingsAccessibility": {
+    "description": "Title for accessibility settings section"
+  },
+  "settingsProfileError": "We couldn’t load your profile. Please try again later.",
+  "@settingsProfileError": {
+    "description": "Error message when profile fails to load"
+  },
+  "homeScenarioPasswordsSubtitle": "Bring order to your important passwords and accounts, without stress.",
+  "@homeScenarioPasswordsSubtitle": {
+    "description": "Passwords scenario card subtitle"
+  },
+  "homeScenarioDeviceTitle": "Slow or strange phone",
+  "@homeScenarioDeviceTitle": {
+    "description": "Device scenario card title"
+  },
+  "homeScenarioDeviceSubtitle": "We review what might be happening and how to fix it, step by step.",
+  "@homeScenarioDeviceSubtitle": {
+    "description": "Device scenario card subtitle"
+  },
+  "allyRiskHigh": "High risk",
+  "@allyRiskHigh": {
+    "description": "High risk label for Ally analysis"
+  },
+  "allyRiskMedium": "Medium risk",
+  "@allyRiskMedium": {
+    "description": "Medium risk label for Ally analysis"
+  },
+  "allyRiskLow": "Low risk",
+  "@allyRiskLow": {
+    "description": "Low risk label for Ally analysis"
+  },
+  "allyDetectedSectionTitle": "I've detected",
+  "@allyDetectedSectionTitle": {
+    "description": "Title for detected items section in Ally analysis"
+  },
+  "allyDetectedUrls": "Links",
+  "@allyDetectedUrls": {
+    "description": "Label for detected URLs"
+  },
+  "allyDetectedAmounts": "Amounts",
+  "@allyDetectedAmounts": {
+    "description": "Label for detected monetary amounts"
+  },
+  "allyDetectedEntities": "Mentioned entities",
+  "@allyDetectedEntities": {
+    "description": "Label for detected entities (banks, services, etc)"
+  },
+  "allyActionsSectionTitle": "Recommended steps",
+  "@allyActionsSectionTitle": {
+    "description": "Title for recommended actions section"
+  },
+  "allyConditionalGuidanceTitle": "Depending on your situation",
+  "@allyConditionalGuidanceTitle": {
+    "description": "Title for conditional guidance section (if/then scenarios)"
+  },
+  "consentTitle": "Before we start",
+  "@consentTitle": {
+    "description": "Title of the consent screen"
+  },
+  "consentBulletCopyPasteOnly": "We only see what you choose to copy and paste here.",
+  "@consentBulletCopyPasteOnly": {
+    "description": "Consent bullet point about copy paste"
+  },
+  "consentBulletBackendAI": "We analyse your text on a secure server using an AI model.",
+  "@consentBulletBackendAI": {
+    "description": "Consent bullet point about backend AI"
+  },
+  "consentBulletYouControl": "You can stop using the app at any time; we do not automatically scan your phone.",
+  "@consentBulletYouControl": {
+    "description": "Consent bullet point about user control"
+  },
+  "consentPrimaryButton": "I accept and continue",
+  "@consentPrimaryButton": {
+    "description": "Primary button on consent screen"
+  },
+  "consentSecondaryButton": "See more details",
+  "@consentSecondaryButton": {
+    "description": "Secondary button on consent screen"
+  }
+}
+

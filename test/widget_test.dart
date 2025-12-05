@@ -1,30 +1,46 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:athenai/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:persalone/app/persalone_app.dart';
+import 'package:persalone/features/auth/presentation/pages/login_page.dart';
+import 'package:persalone/features/consent/presentation/pages/consent_page.dart';
+import 'package:persalone/core/widgets/primary_button.dart';
+import 'package:persalone/core/di/service_locator.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  setUp(() async {
+    // Ensure Flutter binding is initialized
+    TestWidgetsFlutterBinding.ensureInitialized();
+    
+    // Mock SharedPreferences with empty initial values
+    // This will make the app start from ConsentPage (no consent accepted yet)
+    SharedPreferences.setMockInitialValues({});
+    
+    // Initialize PreferencesStorage
+    await ServiceLocator().initPreferencesStorage();
+  });
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('PersalOne starts at ConsentPage and navigates to LoginPage', (WidgetTester tester) async {
+    // Build the app
+    await tester.pumpWidget(const PersalOneApp());
+    
+    // Let the first frame build and any initial navigation settle
+    await tester.pumpAndSettle();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    // The app should start at ConsentPage (since consent is not accepted by default)
+    expect(find.byType(ConsentPage), findsOneWidget);
+    expect(find.byType(LoginPage), findsNothing);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Find and tap the accept button (PrimaryButton with specific text)
+    // The ConsentPage has a primary accept button
+    final acceptButtons = find.byType(PrimaryButton);
+    expect(acceptButtons, findsAtLeastNWidgets(1));
+    
+    // Tap the first PrimaryButton (which should be the accept button)
+    await tester.tap(acceptButtons.first);
+    await tester.pumpAndSettle();
+
+    // Now it should be at LoginPage (since user is not authenticated)
+    expect(find.byType(ConsentPage), findsNothing);
+    expect(find.byType(LoginPage), findsOneWidget);
   });
 }

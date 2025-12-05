@@ -1,0 +1,247 @@
+{
+  "@@locale": "es",
+  "appTitle": "PersalOne",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "homeTitle": "Mi estado de seguridad",
+  "@homeTitle": {
+    "description": "Home page main title"
+  },
+  "homeHeroTitle": "Para cuando lo digital se te hace bola",
+  "@homeHeroTitle": {
+    "description": "Home page hero title"
+  },
+  "homeHeroSubtitle": "Te acompañamos paso a paso con tu móvil, tus cuentas y tus dudas online. Sin tecnicismos, sin prisas y sin hacerte sentir mal por no saber.",
+  "@homeHeroSubtitle": {
+    "description": "Home page hero subtitle"
+  },
+  "homeTalkToAgent": "Hablar con mi agente IA",
+  "@homeTalkToAgent": {
+    "description": "Button to open agent chat"
+  },
+  "homeViewPlans": "Ver planes y precios",
+  "@homeViewPlans": {
+    "description": "Button to view pricing plans"
+  },
+  "homeBasicChecklist": "Checklist básico de seguridad",
+  "@homeBasicChecklist": {
+    "description": "Button for basic security checklist"
+  },
+  "homeBetaMessage": "Tu panel está en modo beta. Aún no está conectado a todas tus fuentes, pero ya puedes hablar con tu agente IA y seguir un checklist básico.",
+  "@homeBetaMessage": {
+    "description": "Beta status message on home page"
+  },
+  "homeQuickActions": "Acciones rápidas",
+  "@homeQuickActions": {
+    "description": "Quick actions section title"
+  },
+  "homeFooterNote": "Versión beta técnica — conexión con el backend Athena pendiente.",
+  "@homeFooterNote": {
+    "description": "Footer note about beta status"
+  },
+  "homeHelpTodayTitle": "Hoy podemos ayudarte con…",
+  "@homeHelpTodayTitle": {
+    "description": "Home page help section title"
+  },
+  "homeScenarioScamsTitle": "Mensajes sospechosos y estafas",
+  "@homeScenarioScamsTitle": {
+    "description": "Scam scenario card title"
+  },
+  "homeScenarioScamsSubtitle": "Revisamos contigo SMS, correos o mensajes raros antes de que pulses nada.",
+  "@homeScenarioScamsSubtitle": {
+    "description": "Scam scenario card subtitle"
+  },
+  "homeScenarioPasswordsTitle": "Contraseñas y accesos",
+  "@homeScenarioPasswordsTitle": {
+    "description": "Passwords scenario card title"
+  },
+  "homeScenarioPasswordsSubtitle": "Te ayudamos a ordenar tus contraseñas y a elegir opciones más seguras sin agobios.",
+  "@homeScenarioPasswordsSubtitle": {
+    "description": "Passwords scenario card subtitle"
+  },
+  "homeScenarioDeviceTitle": "Móvil lento o raro",
+  "@homeScenarioDeviceTitle": {
+    "description": "Device issues scenario card title"
+  },
+  "homeScenarioDeviceSubtitle": "Si tu móvil va lento o hace cosas extrañas, te guiamos paso a paso para revisarlo.",
+  "@homeScenarioDeviceSubtitle": {
+    "description": "Device issues scenario card subtitle"
+  },
+  "settings": "Ajustes",
+  "@settings": {
+    "description": "Settings menu item"
+  },
+  "settingsAccessibility": "Accesibilidad",
+  "@settingsAccessibility": {
+    "description": "Accessibility section title"
+  },
+  "settingsLargeText": "Texto grande",
+  "@settingsLargeText": {
+    "description": "Large text accessibility option"
+  },
+  "settingsLargeTextSubtitle": "Aumenta el tamaño de la letra en toda la app",
+  "@settingsLargeTextSubtitle": {
+    "description": "Large text subtitle"
+  },
+  "settingsHighContrast": "Alto contraste",
+  "@settingsHighContrast": {
+    "description": "High contrast accessibility option"
+  },
+  "settingsHighContrastSubtitle": "Mejora la visibilidad con colores más contrastados",
+  "@settingsHighContrastSubtitle": {
+    "description": "High contrast subtitle"
+  },
+  "settingsEasyReading": "Modo lectura fácil",
+  "@settingsEasyReading": {
+    "description": "Easy reading mode accessibility option"
+  },
+  "settingsEasyReadingSubtitle": "Reduce elementos visuales y simplifica el diseño",
+  "@settingsEasyReadingSubtitle": {
+    "description": "Easy reading subtitle"
+  },
+  "settingsInfoMessage": "Los ajustes de accesibilidad se aplicarán en futuras versiones. Por ahora, esta pantalla solo demuestra la funcionalidad.",
+  "@settingsInfoMessage": {
+    "description": "Settings info card message"
+  },
+  "settingsWhatCanDoTitle": "Qué puede hacer PersalOne",
+  "@settingsWhatCanDoTitle": {
+    "description": "Settings section title for capabilities"
+  },
+  "settingsWhatCanDoIntro": "Para que puedas usar PersalOne con tranquilidad, esto es lo que sí puede hacer y lo que no.",
+  "@settingsWhatCanDoIntro": {
+    "description": "Intro text for capabilities section"
+  },
+  "settingsWhatCanDoCanTitle": "Puede ayudarte a:",
+  "@settingsWhatCanDoCanTitle": {
+    "description": "Title for what PersalOne can do list"
+  },
+  "settingsWhatCanDoCanItem1": "Entender mensajes o emails que te generan dudas.",
+  "@settingsWhatCanDoCanItem1": {
+    "description": "First item in can-do list"
+  },
+  "settingsWhatCanDoCanItem2": "Decidir qué pasos dar cuando algo te parece raro.",
+  "@settingsWhatCanDoCanItem2": {
+    "description": "Second item in can-do list"
+  },
+  "settingsWhatCanDoCanItem3": "Aprender poco a poco a moverte con más seguridad.",
+  "@settingsWhatCanDoCanItem3": {
+    "description": "Third item in can-do list"
+  },
+  "settingsWhatCanDoCannotTitle": "No puede:",
+  "@settingsWhatCanDoCannotTitle": {
+    "description": "Title for what PersalOne cannot do list"
+  },
+  "settingsWhatCanDoCannotItem1": "Entrar en tus cuentas ni cambiar nada por ti.",
+  "@settingsWhatCanDoCannotItem1": {
+    "description": "First item in cannot-do list"
+  },
+  "settingsWhatCanDoCannotItem2": "Ver tus fotos, tus mensajes o tus correos.",
+  "@settingsWhatCanDoCannotItem2": {
+    "description": "Second item in cannot-do list"
+  },
+  "settingsWhatCanDoCannotItem3": "Tomar decisiones en tu nombre sin que tú lo veas.",
+  "@settingsWhatCanDoCannotItem3": {
+    "description": "Third item in cannot-do list"
+  },
+  "pricingTitle": "Planes y Precios",
+  "@pricingTitle": {
+    "description": "Pricing page title"
+  },
+  "pricingDisclaimer": "Los planes y precios que ves aquí forman parte de la beta de PersalOne. Son una propuesta inicial y pueden cambiar antes del lanzamiento final. Nunca se realizará ningún cobro real sin informarte y pedir tu confirmación.",
+  "@pricingDisclaimer": {
+    "description": "Pricing disclaimer message"
+  },
+  "pricingForIndividuals": "Para individuos",
+  "@pricingForIndividuals": {
+    "description": "Individual plans section title"
+  },
+  "pricingForIndividualsSubtitle": "Protege tu vida digital personal",
+  "@pricingForIndividualsSubtitle": {
+    "description": "Individual plans subtitle"
+  },
+  "pricingForBusiness": "Para equipos y empresas",
+  "@pricingForBusiness": {
+    "description": "Business plans section title"
+  },
+  "pricingForBusinessSubtitle": "Protección escalable para tu organización",
+  "@pricingForBusinessSubtitle": {
+    "description": "Business plans subtitle"
+  },
+  "pricingPopular": "Popular",
+  "@pricingPopular": {
+    "description": "Popular plan badge"
+  },
+  "agentTitle": "Tu persona de confianza para lo digital",
+  "@agentTitle": {
+    "description": "Agent page title"
+  },
+  "agentIntro": "Cuéntanos qué ves en la pantalla, qué mensaje te ha llegado o qué te preocupa. Te devolveremos pasos claros, explicados en un lenguaje que sí es el tuyo.",
+  "@agentIntro": {
+    "description": "Agent page intro text"
+  },
+  "agentInputPlaceholder": "¿En qué puedo ayudarte?",
+  "@agentInputPlaceholder": {
+    "description": "Agent input field placeholder"
+  },
+  "agentWelcomeMessage": "¡Hola! Soy tu aliado de seguridad digital.\n\nEstoy aquí para ayudarte a entender y mejorar tu seguridad online de forma sencilla y sin tecnicismos.\n\nPuedes preguntarme sobre:\n• Contraseñas y cuentas seguras\n• Detectar correos o mensajes sospechosos\n• Proteger tus dispositivos\n• Usar internet de forma más segura\n\n¿En qué puedo ayudarte hoy?",
+  "@agentWelcomeMessage": {
+    "description": "Agent welcome message"
+  },
+  "agentRetry": "Reintentar",
+  "@agentRetry": {
+    "description": "Retry button label"
+  },
+  "agentErrorUnexpected": "Ocurrió un error inesperado. Por favor, intenta de nuevo.",
+  "@agentErrorUnexpected": {
+    "description": "Unexpected error message"
+  },
+  "agentChipSuspiciousMessage": "He recibido un mensaje sospechoso",
+  "@agentChipSuspiciousMessage": {
+    "description": "Agent suggestion chip for suspicious messages"
+  },
+  "agentChipBankEmail": "No entiendo un email del banco",
+  "@agentChipBankEmail": {
+    "description": "Agent suggestion chip for bank emails"
+  },
+  "agentChipPasswords": "Quiero revisar mis contraseñas",
+  "@agentChipPasswords": {
+    "description": "Agent suggestion chip for passwords"
+  },
+  "checklistNotAvailable": "Checklist aún no disponible en esta versión.",
+  "@checklistNotAvailable": {
+    "description": "Checklist not available message"
+  },
+  "loginTitle": "Accede a tu aliado PersalOne",
+  "@loginTitle": {
+    "description": "Login page title"
+  },
+  "loginSubtitle": "Inicia sesión para continuar donde lo dejaste con tu persona de confianza para lo digital.",
+  "@loginSubtitle": {
+    "description": "Login page subtitle"
+  },
+  "loginEmailLabel": "Correo electrónico",
+  "@loginEmailLabel": {
+    "description": "Email input label"
+  },
+  "loginPasswordLabel": "Contraseña",
+  "@loginPasswordLabel": {
+    "description": "Password input label"
+  },
+  "loginButton": "Entrar",
+  "@loginButton": {
+    "description": "Login button label"
+  },
+  "loginErrorRequired": "Se requieren email y contraseña.",
+  "@loginErrorRequired": {
+    "description": "Error when email or password is empty"
+  },
+  "loginErrorGeneric": "No se ha podido iniciar sesión. Revisa tus datos e inténtalo de nuevo.",
+  "@loginErrorGeneric": {
+    "description": "Generic login error message"
+  },
+  "loginErrorSessionExpired": "Tu sesión ha caducado. Por favor, inicia sesión de nuevo.",
+  "@loginErrorSessionExpired": {
+    "description": "Session expired error message"
+  }
+}

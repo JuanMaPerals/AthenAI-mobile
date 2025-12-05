@@ -1,0 +1,7 @@
+{
+    "java.jdt.ls.java.home": "",
+    "java.import.gradle.java.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.17.10-hotspot",
+    "maven.terminal.useJavaHome": true,
+    "java.import.gradle.home": "C:\\Program Files\\Eclipse Adoptium\\jdk-17.0.17.10-hotspot",
+    "java.configuration.updateBuildConfiguration": "disabled"
+}

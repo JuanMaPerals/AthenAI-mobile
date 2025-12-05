@@ -58,7 +58,7 @@ class AgentApiService {
   /// - [userMode]: "individual", "caregiver", or "team" - defines the user's context
   /// - [explanationStyle]: "stepByStep" or "concise" - preferred explanation style
   /// - [easyReading]: true = prefer step-by-step format, shorter sentences, clear structure
-  /// - [urls]: List of URLs extracted from the message for future WebCheck integration
+  /// - [urls]: List of URLs extracted from the message for security analysis
   Future<AllyMessageResponseV2> sendMessage({
     required String message,
     String? conversationId,
@@ -71,7 +71,7 @@ class AgentApiService {
     String? explanationStyle,
     String? focusArea,
     bool? easyReading,
-    // URLs extracted from message for future WebCheck integration
+    // URLs extracted from message for security analysis
     List<String>? urls,
   }) async {
     // Get current session from AuthRepository
@@ -99,7 +99,7 @@ class AgentApiService {
         if (explanationStyle != null) 'explanationStyle': explanationStyle,
         if (focusArea != null) 'focusArea': focusArea,
         if (easyReading != null) 'easyReading': easyReading,
-        // Include URLs for future WebCheck integration
+        // Include URLs for security analysis
         if (urls != null && urls.isNotEmpty) 'urls': urls,
       },
     };

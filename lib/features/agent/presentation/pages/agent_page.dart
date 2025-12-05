@@ -101,8 +101,8 @@ class _AgentPageState extends State<AgentPage> {
       final userMode = prefs.userMode.name; // 'individual', 'caregiver', 'team'
       final explanationStyle = prefs.explanationStyle.name; // 'stepByStep', 'concise'
       final easyReading = accessibilitySettings.simplifiedLayout; // Accessibility preference
-      
-      // Extract URLs from the message for future WebCheck integration
+
+      // Extract URLs from the message for security analysis
       final extractedUrls = _extractUrlsFromText(text);
       
       // Send message to AI Ally with user preferences
@@ -297,7 +297,7 @@ class _AgentPageState extends State<AgentPage> {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed(HomePage.routeName);
+            Navigator.of(context).pop();
           },
         ),
       ),
@@ -401,8 +401,8 @@ class _AgentPageState extends State<AgentPage> {
     );
   }
 
-  /// Extracts URLs from a text message for future WebCheck integration
-  /// 
+  /// Extracts URLs from a text message for security analysis
+  ///
   /// Uses a simple RegExp to find http:// and https:// URLs
   /// Returns a list of unique URLs found in the text
   /// URLs are not cached or logged, only passed to the backend in the request

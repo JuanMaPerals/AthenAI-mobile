@@ -147,6 +147,19 @@ class _SettingsPageState extends State<SettingsPage> {
             },
           ),
 
+          const SizedBox(height: 16),
+
+          // Accessibility explanation text
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Text(
+              l10n.settingsAccessibilityExplanation,
+              style: theme.textTheme.bodySmall?.copyWith(
+                color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+              ),
+            ),
+          ),
+
           const SizedBox(height: 24),
 
           // Info card

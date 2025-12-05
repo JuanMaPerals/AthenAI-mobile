@@ -12,11 +12,11 @@
   "@homeTitle": {
     "description": "Home page main title"
   },
-  "homeHeroTitle": "AI that protects your online decisions. You set the limits.",
+  "homeHeroTitle": "Your AI agent to review messages, links and sensitive access.",
   "@homeHeroTitle": {
     "description": "Home page hero title"
   },
-  "homeHeroSubtitle": "PersalOne reviews important links, charges and logins with you. Behind it is a team led by Juan Ma Perals that turns advanced AI into clear, actionable recommendations.",
+  "homeHeroSubtitle": "PersalOne helps you detect signs of fraud and digital risks before you click or make an important decision.",
   "@homeHeroSubtitle": {
     "description": "Home page hero subtitle"
   },
@@ -104,6 +104,10 @@
   "@settingsEasyReadingSubtitle": {
     "description": "Easy reading subtitle"
   },
+  "settingsAccessibilityExplanation": "These settings are designed to adapt to different ways of reading and processing information. You can try them and stick with what feels most comfortable.",
+  "@settingsAccessibilityExplanation": {
+    "description": "Explanation text for accessibility settings"
+  },
   "settingsInfoMessage": "Accessibility settings will be applied in future versions. For now, this screen only demonstrates the functionality.",
   "@settingsInfoMessage": {
     "description": "Settings info card message"
@@ -120,15 +124,15 @@
   "@settingsWhatCanDoCanTitle": {
     "description": "Title for what PersalOne can do list"
   },
-  "settingsWhatCanDoCanItem1": "Understand messages or emails that raise doubts.",
+  "settingsWhatCanDoCanItem1": "Understand messages, emails and notices that raise doubts.",
   "@settingsWhatCanDoCanItem1": {
     "description": "First item in can-do list"
   },
-  "settingsWhatCanDoCanItem2": "Decide what steps to take when something seems off.",
+  "settingsWhatCanDoCanItem2": "Review links and notices before clicking or responding.",
   "@settingsWhatCanDoCanItem2": {
     "description": "Second item in can-do list"
   },
-  "settingsWhatCanDoCanItem3": "Learn gradually to navigate with more security.",
+  "settingsWhatCanDoCanItem3": "Learn gradually to recognize risk signals.",
   "@settingsWhatCanDoCanItem3": {
     "description": "Third item in can-do list"
   },
@@ -136,17 +140,17 @@
   "@settingsWhatCanDoCannotTitle": {
     "description": "Title for what PersalOne cannot do list"
   },
-  "settingsWhatCanDoCannotItem1": "Access your accounts or change anything for you.",
+  "settingsWhatCanDoCannotItem1": "Does not access your accounts or act on your behalf.",
   "@settingsWhatCanDoCannotItem1": {
     "description": "First item in cannot-do list"
   },
-  "settingsWhatCanDoCannotItem2": "It does not replace the police, your bank or official emergency services.",
+  "settingsWhatCanDoCannotItem2": "Does not replace the police, your bank or emergency services.",
   "@settingsWhatCanDoCannotItem2": {
-    "description": "Settings bullet: service limits"
+    "description": "Second item in cannot-do list"
   },
-  "settingsWhatCanDoCannotItem3": "It is not a tool to spy on someone else's phone or to monitor others without their consent.",
+  "settingsWhatCanDoCannotItem3": "Is not a tool to spy on or control other people.",
   "@settingsWhatCanDoCannotItem3": {
-    "description": "Settings bullet: not for spying on other phones"
+    "description": "Third item in cannot-do list"
   },
   "pricingTitle": "Plans and pricing",
   "@pricingTitle": {
@@ -236,11 +240,11 @@
   "@pricingPopular": {
     "description": "Popular plan badge"
   },
-  "agentTitle": "Your trusted person for all things digital",
+  "agentTitle": "Your AI agent against fraud and online scams",
   "@agentTitle": {
     "description": "Agent page title"
   },
-  "agentIntro": "Tell us what you see on the screen, what message you received or what's worrying you. We'll give you clear steps in language that actually makes sense to you.",
+  "agentIntro": "Tell me what happened and we'll review the situation together.\\nYou can paste the message, link or notice that concerns you. I'll help you see the risks and next steps.",
   "@agentIntro": {
     "description": "Agent page intro text"
   },
@@ -321,11 +325,15 @@
   "@loginErrorSessionExpired": {
     "description": "Session expired error message"
   },
-  "loginDemoMode": "Try PersalOne in demo mode (offline)",
+  "loginDemoMode": "Enter demo mode (no real data)",
   "@loginDemoMode": {
     "description": "Demo/offline mode button label"
   },
-  "homeScenarioDeviceSlowSubtitle": "My phone is slow or behaves strangely",
+  "loginDemoModeDescription": "You'll try the app with a sample profile. No real personal data will be analyzed or saved.",
+  "@loginDemoModeDescription": {
+    "description": "Demo mode description text"
+  },
+  "homeScenarioDeviceSlowSubtitle": "My phone is slow or works strangely",
   "@homeScenarioDeviceSlowSubtitle": {
     "description": "Device scenario third card navigation message"
   },

@@ -84,6 +84,10 @@
   "@settingsEasyReadingSubtitle": {
     "description": "Easy reading subtitle"
   },
+  "settingsAccessibilityExplanation": "Estos ajustes están pensados para adaptarse a distintas formas de leer y procesar la información. Puedes probarlos y quedarte con lo que te resulte más cómodo.",
+  "@settingsAccessibilityExplanation": {
+    "description": "Explanation text for accessibility settings"
+  },
   "settingsInfoMessage": "Los ajustes de accesibilidad se aplicarán en futuras versiones. Por ahora, esta pantalla solo demuestra la funcionalidad.",
   "@settingsInfoMessage": {
     "description": "Settings info card message"
@@ -100,15 +104,15 @@
   "@settingsWhatCanDoCanTitle": {
     "description": "Title for what PersalOne can do list"
   },
-  "settingsWhatCanDoCanItem1": "Entender mensajes o emails que te generan dudas.",
+  "settingsWhatCanDoCanItem1": "Entender mensajes, correos y avisos que te generan dudas.",
   "@settingsWhatCanDoCanItem1": {
     "description": "First item in can-do list"
   },
-  "settingsWhatCanDoCanItem2": "Decidir qué pasos dar cuando algo te parece raro.",
+  "settingsWhatCanDoCanItem2": "Revisar enlaces y avisos antes de hacer clic o responder.",
   "@settingsWhatCanDoCanItem2": {
     "description": "Second item in can-do list"
   },
-  "settingsWhatCanDoCanItem3": "Aprender poco a poco a moverte con más seguridad.",
+  "settingsWhatCanDoCanItem3": "Aprender poco a poco a reconocer señales de riesgo.",
   "@settingsWhatCanDoCanItem3": {
     "description": "Third item in can-do list"
   },
@@ -116,17 +120,17 @@
   "@settingsWhatCanDoCannotTitle": {
     "description": "Title for what PersalOne cannot do list"
   },
-  "settingsWhatCanDoCannotItem1": "Entrar en tus cuentas ni cambiar nada por ti.",
+  "settingsWhatCanDoCannotItem1": "No entra en tus cuentas ni actúa en tu nombre.",
   "@settingsWhatCanDoCannotItem1": {
-    "description": "Pricing disclaimer message"
+    "description": "First item in cannot-do list"
   },
-  "settingsWhatCanDoCannotItem2": "No sustituye a la policía, a tu banco ni a los servicios oficiales de emergencia.",
+  "settingsWhatCanDoCannotItem2": "No sustituye a la policía, a tu banco ni a los servicios de emergencia.",
   "@settingsWhatCanDoCannotItem2": {
-    "description": "Bullet en ajustes: aclarar límites del servicio"
+    "description": "Second item in cannot-do list"
   },
-  "settingsWhatCanDoCannotItem3": "No es una herramienta para espiar el móvil de otra persona ni para controlar a terceros sin su permiso.",
+  "settingsWhatCanDoCannotItem3": "No es una herramienta para espiar ni controlar a otras personas.",
   "@settingsWhatCanDoCannotItem3": {
-    "description": "Bullet en ajustes: no es para espiar móviles ajenos"
+    "description": "Third item in cannot-do list"
   },
   "pricingIndividualSectionTitle": "Para ti",
   "@pricingIndividualSectionTitle": {
@@ -297,11 +301,15 @@
   "@loginErrorSessionExpired": {
     "description": "Session expired error message"
   },
-  "loginDemoMode": "Entrar en modo prueba (sin conexión)",
+  "loginDemoMode": "Entrar en modo demo (sin datos reales)",
   "@loginDemoMode": {
     "description": "Demo/offline mode button label"
   },
-  "homeScenarioDeviceSlowSubtitle": "Mi móvil va lento o hace cosas raras",
+  "loginDemoModeDescription": "Probarás la app con un perfil de ejemplo. No se analizarán datos personales reales ni se guardará nada.",
+  "@loginDemoModeDescription": {
+    "description": "Demo mode description text"
+  },
+  "homeScenarioDeviceSlowSubtitle": "Mi móvil va lento o funciona de forma extraña",
   "@homeScenarioDeviceSlowSubtitle": {
     "description": "Device scenario third card navigation message"
   },
@@ -488,7 +496,7 @@
   },
   
   "checklistCenterTitle": "Centro de revisiones",
-  "checklistCenterIntro": "Usa este espacio para revisar casos con calma y dejar constancia de tus decisiones.",
+  "checklistCenterIntro": "Usa este espacio para revisar casos y dejar constancia de tus decisiones.\\nAsí tendrás un registro claro de lo que ocurrió y de cómo actuaste.",
   "checklistStartNewReview": "Empezar nueva revisión",
   "checklistRecentReviews": "Revisiones recientes",
   "checklistNoReviewsYet": "Sin revisiones todavía",

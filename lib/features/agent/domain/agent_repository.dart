@@ -12,7 +12,7 @@ abstract class AgentRepository {
   /// [explanationStyle] - User's preferred explanation style (stepByStep, concise)
   /// [easyReading] - Accessibility preference for simplified, step-by-step format
   /// [focusArea] - User's focus area (optional)
-  /// [urls] - List of URLs extracted from the message for future WebCheck integration
+  /// [urls] - List of URLs extracted from the message for security analysis
   /// 
   /// Returns the AI Ally's response message
   Future<AgentMessage> sendUserMessage(

@@ -589,6 +589,112 @@
   "consentSecondaryButton": "See more details",
   "@consentSecondaryButton": {
     "description": "Secondary button on consent screen"
-  }
+  },
+
+  "loginHeaderTitle": "Access your PersalOne account",
+  "@loginHeaderTitle": {
+    "description": "Main header title on login page"
+  },
+  "loginSecuritySubtitle": "We protect your access with strong passwords and optional additional verification.",
+  "@loginSecuritySubtitle": {
+    "description": "Security-focused subtitle on login page"
+  },
+  "loginSocialLoginSection": "Continue with",
+  "@loginSocialLoginSection": {
+    "description": "Section title for social login options"
+  },
+  "loginWithGoogle": "Continue with Google",
+  "@loginWithGoogle": {
+    "description": "Google social login button"
+  },
+  "loginWithGitHub": "Continue with GitHub",
+  "@loginWithGitHub": {
+    "description": "GitHub social login button"
+  },
+  "loginWithLinkedIn": "Continue with LinkedIn",
+  "@loginWithLinkedIn": {
+    "description": "LinkedIn social login button"
+  },
+  "loginOrDivider": "or use your email",
+  "@loginOrDivider": {
+    "description": "Divider text between social login and email login"
+  },
+  "loginPasswordHint": "Use a password of at least 14 characters—a long passphrase only you remember works best.",
+  "@loginPasswordHint": {
+    "description": "Hint text for strong password requirements"
+  },
+  "loginCreateAccount": "Create new account",
+  "@loginCreateAccount": {
+    "description": "Create new account button"
+  },
+  "loginWithEmail": "Sign in with email",
+  "@loginWithEmail": {
+    "description": "Email login button label"
+  },
+  "settingsSecuritySectionTitle": "Better protect your account",
+  "@settingsSecuritySectionTitle": {
+    "description": "Security section title in settings"
+  },
+  "settingsSecurity2FATitle": "Enable two-factor authentication (2FA) on your account.",
+  "@settingsSecurity2FATitle": {
+    "description": "2FA recommendation in settings"
+  },
+  "settingsSecurityPasswordTitle": "Use a long, unique password for PersalOne.",
+  "@settingsSecurityPasswordTitle": {
+    "description": "Password recommendation in settings"
+  },
+  "settingsSecurityActivityTitle": "Review your login activity from time to time.",
+  "@settingsSecurityActivityTitle": {
+    "description": "Login activity recommendation in settings"
+  },
+  "settingsSecurityInfoNote": "These features will be activated when the ZITADEL integration is complete.",
+  "@settingsSecurityInfoNote": {
+    "description": "Informational note that 2FA features are coming soon"
+  },
+
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "save": "Save",
+
+  "checklistCenterTitle": "Review Center",
+  "checklistCenterIntro": "Use this space to review cases and record your decisions.\\nThis way you'll have a clear record of what happened and how you acted.",
+  "checklistStartNewReview": "Start new review",
+  "checklistRecentReviews": "Recent reviews",
+  "checklistNoReviewsYet": "No reviews yet",
+  "checklistNoReviewsHelp": "Tap 'Start new review' to create your first review.",
+
+  "reviewNewTitle": "New review",
+  "reviewWhatToReview": "What do you want to review?",
+  "reviewCaseType": "Case type",
+  "reviewCaseTypeSuspiciousMessage": "Suspicious message",
+  "reviewCaseTypeCallOrVoice": "Call or voice note",
+  "reviewCaseTypeLinkOrWebsite": "Link or website",
+  "reviewCaseTypePhoneSettings": "Phone setting",
+  "reviewCaseTypeOther": "Other",
+  "reviewOptionalTitle": "Case title (optional)",
+  "reviewTitleHint": "For example: Bank SMS Caixa 03/12",
+  "reviewSignalsReviewed": "Signals reviewed",
+  "reviewChecklistHelp": "Check the signals you've identified",
+  "reviewRiskAndDecision": "Risk and decision",
+  "reviewHowDoYouSeeRisk": "How do you see the risk?",
+  "reviewRiskLow": "Low",
+  "reviewRiskMedium": "Medium",
+  "reviewRiskHigh": "High",
+  "reviewWhatDidYouDecide": "What did you decide to do?",
+  "reviewDecisionHint": "For example: I won't click the link and I'll call the bank tomorrow",
+  "reviewDecisionHelperText": "Briefly describe what action you're going to take or have already taken",
+  "reviewSaveReview": "Save review",
+
+  "reviewSummaryTitle": "Review summary",
+  "reviewDate": "Date",
+  "reviewRiskPerceived": "Perceived risk",
+  "reviewDecisionTaken": "Decision taken",
+  "reviewNoDecisionRecorded": "No decision recorded",
+  "reviewExportActions": "Export report",
+  "reviewCopyReport": "Copy report",
+  "reviewPrepareEmail": "Prepare email with report",
+  "reviewCopiedToClipboard": "Report copied to clipboard",
+  "reviewEmailNotAvailableYet": "Email function in development. Report has been copied to clipboard.",
+  "reviewDeleteConfirm": "Are you sure you want to delete this review?"
 }
 

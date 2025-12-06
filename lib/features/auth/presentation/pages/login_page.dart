@@ -6,6 +6,9 @@ import '../../../../core/di/service_locator.dart';
 import '../../../home/presentation/pages/home_page.dart';
 import '../../../onboarding/presentation/pages/onboarding_page.dart';
 
+/// Social login providers
+enum SocialProvider { google, github, linkedin }
+
 class LoginPage extends StatefulWidget {
   static const String routeName = '/login';
 
@@ -20,6 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   bool _isLoading = false;
+  bool _obscurePassword = true;
 
   @override
   void dispose() {
@@ -122,127 +126,293 @@ class _LoginPageState extends State<LoginPage> {
     _navigateAfterLogin();
   }
 
+  /// Handle social login button press
+  /// TODO: Trigger backend/ZITADEL social login flow
+  /// This will eventually redirect to backend endpoint that initiates OAuth flow
+  void _onSocialLoginPressed(SocialProvider provider) {
+    if (!mounted) return;
+
+    final l10n = AppLocalizations.of(context)!;
+    final providerName = switch (provider) {
+      SocialProvider.google => 'Google',
+      SocialProvider.github => 'GitHub',
+      SocialProvider.linkedin => 'LinkedIn',
+    };
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Inicio de sesión con $providerName próximamente'),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
+    );
+  }
+
+  /// Handle create account button press
+  /// TODO: Navigate to registration flow or trigger backend registration
+  void _handleCreateAccount() {
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: const Text('Registro de cuenta nueva próximamente'),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.all(24),
-          child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 400),
-            child: Form(
-              key: _formKey,
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 440),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // PersalOne Logo and Title
+                  // ===== HEADER SECTION =====
+                  // Logo and title
                   Center(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image.asset(
                           'assets/images/persalone_logo.png',
-                          height: 96,
+                          height: 80,
                           fit: BoxFit.contain,
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          l10n.loginTitle,
+                          l10n.loginHeaderTitle,
                           style: theme.textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
-                            color: theme.colorScheme.primary,
+                            color: scheme.primary,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                        const SizedBox(height: 12),
+                        // Security-focused subtitle
+                        Text(
+                          l10n.loginSecuritySubtitle,
+                          style: theme.textTheme.bodyMedium?.copyWith(
+                            color: scheme.onSurface.withValues(alpha: 0.7),
                           ),
                           textAlign: TextAlign.center,
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 40),
 
-                  // Subtitle
-                  Text(
-                    l10n.loginSubtitle,
-                    style: theme.textTheme.bodyMedium,
-                    textAlign: TextAlign.center,
+                  // ===== SOCIAL LOGIN SECTION =====
+                  // Social login buttons
+                  _SocialLoginButton(
+                    provider: SocialProvider.google,
+                    label: l10n.loginWithGoogle,
+                    icon: Icons.login,
+                    onPressed: _isLoading ? null : () => _onSocialLoginPressed(SocialProvider.google),
                   ),
-                  const SizedBox(height: 48),
+                  const SizedBox(height: 12),
+                  _SocialLoginButton(
+                    provider: SocialProvider.github,
+                    label: l10n.loginWithGitHub,
+                    icon: Icons.code,
+                    onPressed: _isLoading ? null : () => _onSocialLoginPressed(SocialProvider.github),
+                  ),
+                  const SizedBox(height: 12),
+                  _SocialLoginButton(
+                    provider: SocialProvider.linkedin,
+                    label: l10n.loginWithLinkedIn,
+                    icon: Icons.work_outline,
+                    onPressed: _isLoading ? null : () => _onSocialLoginPressed(SocialProvider.linkedin),
+                  ),
 
-                  // Email field
-                  TextFormField(
-                    controller: _emailController,
-                    decoration: InputDecoration(
-                      labelText: l10n.loginEmailLabel,
-                      border: const OutlineInputBorder(),
-                      prefixIcon: const Icon(Icons.email_outlined),
-                    ),
-                    keyboardType: TextInputType.emailAddress,
-                    textInputAction: TextInputAction.next,
-                    enabled: !_isLoading,
-                    validator: (value) {
-                      if (value == null || value.trim().isEmpty) {
-                        return l10n.loginErrorRequired;
-                      }
-                      return null;
-                    },
-                  ),
-                  const SizedBox(height: 16),
-
-                  // Password field
-                  TextFormField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      labelText: l10n.loginPasswordLabel,
-                      border: const OutlineInputBorder(),
-                      prefixIcon: const Icon(Icons.lock_outline),
-                    ),
-                    obscureText: true,
-                    textInputAction: TextInputAction.done,
-                    enabled: !_isLoading,
-                    onFieldSubmitted: (_) => _handleLogin(),
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return l10n.loginErrorRequired;
-                      }
-                      return null;
-                    },
-                  ),
                   const SizedBox(height: 32),
 
-                  // Login button
-                  SizedBox(
-                    height: 48,
-                    child: ElevatedButton(
-                      onPressed: _isLoading ? null : _handleLogin,
-                      child: _isLoading
-                          ? const SizedBox(
-                              height: 20,
-                              width: 20,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 2,
-                                color: Colors.white,
+                  // Divider
+                  Row(
+                    children: [
+                      const Expanded(child: Divider()),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        child: Text(
+                          l10n.loginOrDivider,
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: scheme.onSurface.withValues(alpha: 0.6),
+                          ),
+                        ),
+                      ),
+                      const Expanded(child: Divider()),
+                    ],
+                  ),
+
+                  const SizedBox(height: 32),
+
+                  // ===== EMAIL/PASSWORD SECTION =====
+                  Form(
+                    key: _formKey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        // Email field
+                        TextFormField(
+                          controller: _emailController,
+                          decoration: InputDecoration(
+                            labelText: l10n.loginEmailLabel,
+                            border: const OutlineInputBorder(),
+                            prefixIcon: const Icon(Icons.email_outlined),
+                          ),
+                          keyboardType: TextInputType.emailAddress,
+                          textInputAction: TextInputAction.next,
+                          enabled: !_isLoading,
+                          validator: (value) {
+                            if (value == null || value.trim().isEmpty) {
+                              return l10n.loginErrorRequired;
+                            }
+                            return null;
+                          },
+                        ),
+                        const SizedBox(height: 16),
+
+                        // Password field
+                        TextFormField(
+                          controller: _passwordController,
+                          decoration: InputDecoration(
+                            labelText: l10n.loginPasswordLabel,
+                            border: const OutlineInputBorder(),
+                            prefixIcon: const Icon(Icons.lock_outline),
+                            suffixIcon: IconButton(
+                              icon: Icon(
+                                _obscurePassword
+                                    ? Icons.visibility_outlined
+                                    : Icons.visibility_off_outlined,
                               ),
-                            )
-                          : Text(l10n.loginButton),
+                              onPressed: () {
+                                setState(() {
+                                  _obscurePassword = !_obscurePassword;
+                                });
+                              },
+                            ),
+                          ),
+                          obscureText: _obscurePassword,
+                          textInputAction: TextInputAction.done,
+                          enabled: !_isLoading,
+                          onFieldSubmitted: (_) => _handleLogin(),
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return l10n.loginErrorRequired;
+                            }
+                            return null;
+                          },
+                        ),
+
+                        // Password hint
+                        const SizedBox(height: 8),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: Text(
+                            l10n.loginPasswordHint,
+                            style: theme.textTheme.bodySmall?.copyWith(
+                              color: scheme.onSurface.withValues(alpha: 0.6),
+                              fontStyle: FontStyle.italic,
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 24),
+
+                        // Login button
+                        SizedBox(
+                          height: 48,
+                          child: ElevatedButton(
+                            onPressed: _isLoading ? null : _handleLogin,
+                            child: _isLoading
+                                ? const SizedBox(
+                                    height: 20,
+                                    width: 20,
+                                    child: CircularProgressIndicator(
+                                      strokeWidth: 2,
+                                      color: Colors.white,
+                                    ),
+                                  )
+                                : Text(l10n.loginWithEmail),
+                          ),
+                        ),
+
+                        const SizedBox(height: 12),
+
+                        // Create account button
+                        SizedBox(
+                          height: 48,
+                          child: OutlinedButton(
+                            onPressed: _isLoading ? null : _handleCreateAccount,
+                            child: Text(l10n.loginCreateAccount),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
+
+                  const SizedBox(height: 32),
+
+                  // Divider before demo mode
+                  const Divider(),
+
                   const SizedBox(height: 16),
 
-                  // Demo mode button
-                  SizedBox(
-                    height: 48,
-                    child: OutlinedButton(
-                      onPressed: _isLoading ? null : _handleDemoMode,
-                      child: Text(l10n.loginDemoMode),
+                  // Demo mode button (less prominent)
+                  TextButton(
+                    onPressed: _isLoading ? null : _handleDemoMode,
+                    child: Text(
+                      l10n.loginDemoMode,
+                      style: theme.textTheme.bodySmall,
                     ),
                   ),
                 ],
               ),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Social login button widget
+class _SocialLoginButton extends StatelessWidget {
+  final SocialProvider provider;
+  final String label;
+  final IconData icon;
+  final VoidCallback? onPressed;
+
+  const _SocialLoginButton({
+    required this.provider,
+    required this.label,
+    required this.icon,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
+    return SizedBox(
+      height: 48,
+      child: OutlinedButton.icon(
+        onPressed: onPressed,
+        icon: Icon(icon, size: 20),
+        label: Text(label),
+        style: OutlinedButton.styleFrom(
+          foregroundColor: scheme.onSurface,
+          side: BorderSide(color: scheme.outline),
         ),
       ),
     );

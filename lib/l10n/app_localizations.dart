@@ -67,8 +67,8 @@ abstract class AppLocalizations {
 
   final String localeName;
 
-  static AppLocalizations? of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
   }
 
   static const LocalizationsDelegate<AppLocalizations> delegate =
@@ -1201,6 +1201,192 @@ abstract class AppLocalizations {
   /// In es, this message translates to:
   /// **'Guardar'**
   String get save;
+
+  /// Main header title on login page
+  ///
+  /// In es, this message translates to:
+  /// **'Accede a tu cuenta PersalOne'**
+  String get loginHeaderTitle;
+
+  /// Security-focused subtitle on login page
+  ///
+  /// In es, this message translates to:
+  /// **'Protegemos tu acceso con contraseñas robustas y verificación adicional opcional.'**
+  String get loginSecuritySubtitle;
+
+  /// Section title for social login options
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar con'**
+  String get loginSocialLoginSection;
+
+  /// Google social login button
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar con Google'**
+  String get loginWithGoogle;
+
+  /// GitHub social login button
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar con GitHub'**
+  String get loginWithGitHub;
+
+  /// LinkedIn social login button
+  ///
+  /// In es, this message translates to:
+  /// **'Continuar con LinkedIn'**
+  String get loginWithLinkedIn;
+
+  /// Divider text between social login and email login
+  ///
+  /// In es, this message translates to:
+  /// **'o usa tu email'**
+  String get loginOrDivider;
+
+  /// Hint text for strong password requirements
+  ///
+  /// In es, this message translates to:
+  /// **'Usa una contraseña de al menos 14 caracteres, mejor una frase larga que solo tú recuerdes.'**
+  String get loginPasswordHint;
+
+  /// Create new account button
+  ///
+  /// In es, this message translates to:
+  /// **'Crear cuenta nueva'**
+  String get loginCreateAccount;
+
+  /// Email login button label
+  ///
+  /// In es, this message translates to:
+  /// **'Entrar con email'**
+  String get loginWithEmail;
+
+  /// Security section title in settings
+  ///
+  /// In es, this message translates to:
+  /// **'Protege mejor tu cuenta'**
+  String get settingsSecuritySectionTitle;
+
+  /// 2FA recommendation in settings
+  ///
+  /// In es, this message translates to:
+  /// **'Activa la verificación en dos pasos (2FA) en tu cuenta.'**
+  String get settingsSecurity2FATitle;
+
+  /// Password recommendation in settings
+  ///
+  /// In es, this message translates to:
+  /// **'Usa una contraseña larga y única para PersalOne.'**
+  String get settingsSecurityPasswordTitle;
+
+  /// Login activity recommendation in settings
+  ///
+  /// In es, this message translates to:
+  /// **'Revisa de vez en cuando la actividad de inicio de sesión.'**
+  String get settingsSecurityActivityTitle;
+
+  /// Informational note that 2FA features are coming soon
+  ///
+  /// In es, this message translates to:
+  /// **'Estas funciones se activarán cuando la integración con ZITADEL esté completa.'**
+  String get settingsSecurityInfoNote;
+
+  /// Title for link analysis card
+  ///
+  /// In es, this message translates to:
+  /// **'Análisis técnico del enlace'**
+  String get agentLinkAnalysisTitle;
+
+  /// Low risk level label
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo bajo'**
+  String get agentLinkAnalysisRiskLow;
+
+  /// Medium risk level label
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo medio'**
+  String get agentLinkAnalysisRiskMedium;
+
+  /// High risk level label
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo alto'**
+  String get agentLinkAnalysisRiskHigh;
+
+  /// Unknown risk level label
+  ///
+  /// In es, this message translates to:
+  /// **'Riesgo no determinado'**
+  String get agentLinkAnalysisRiskUnknown;
+
+  /// Button to show technical details
+  ///
+  /// In es, this message translates to:
+  /// **'Ver detalles técnicos'**
+  String get agentLinkAnalysisSeeDetails;
+
+  /// Button to hide technical details
+  ///
+  /// In es, this message translates to:
+  /// **'Ocultar detalles'**
+  String get agentLinkAnalysisHideDetails;
+
+  /// Title for additional notes section
+  ///
+  /// In es, this message translates to:
+  /// **'Detalles adicionales'**
+  String get agentLinkAnalysisNotesTitle;
+
+  /// Label for HTTPS status
+  ///
+  /// In es, this message translates to:
+  /// **'Conexión segura (HTTPS)'**
+  String get agentLinkAnalysisHttpsLabel;
+
+  /// Label for redirects count
+  ///
+  /// In es, this message translates to:
+  /// **'Redirecciones'**
+  String get agentLinkAnalysisRedirectsLabel;
+
+  /// Label for domain age
+  ///
+  /// In es, this message translates to:
+  /// **'Antigüedad del dominio'**
+  String get agentLinkAnalysisDomainAgeLabel;
+
+  /// Domain age in days and years
+  ///
+  /// In es, this message translates to:
+  /// **'{days} días ({years} años aproximadamente)'**
+  String agentLinkAnalysisDomainAgeDays(int days, int years);
+
+  /// Label for reputation status
+  ///
+  /// In es, this message translates to:
+  /// **'Reputación'**
+  String get agentLinkAnalysisReputationLabel;
+
+  /// Trusted reputation label
+  ///
+  /// In es, this message translates to:
+  /// **'Confiable'**
+  String get agentLinkAnalysisReputationTrusted;
+
+  /// Suspicious reputation label
+  ///
+  /// In es, this message translates to:
+  /// **'Sospechoso'**
+  String get agentLinkAnalysisReputationSuspicious;
+
+  /// Unknown reputation label
+  ///
+  /// In es, this message translates to:
+  /// **'No determinada'**
+  String get agentLinkAnalysisReputationUnknown;
 }
 
 class _AppLocalizationsDelegate

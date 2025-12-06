@@ -625,4 +625,105 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get save => 'Guardar';
+
+  @override
+  String get loginHeaderTitle => 'Accede a tu cuenta PersalOne';
+
+  @override
+  String get loginSecuritySubtitle =>
+      'Protegemos tu acceso con contraseñas robustas y verificación adicional opcional.';
+
+  @override
+  String get loginSocialLoginSection => 'Continuar con';
+
+  @override
+  String get loginWithGoogle => 'Continuar con Google';
+
+  @override
+  String get loginWithGitHub => 'Continuar con GitHub';
+
+  @override
+  String get loginWithLinkedIn => 'Continuar con LinkedIn';
+
+  @override
+  String get loginOrDivider => 'o usa tu email';
+
+  @override
+  String get loginPasswordHint =>
+      'Usa una contraseña de al menos 14 caracteres, mejor una frase larga que solo tú recuerdes.';
+
+  @override
+  String get loginCreateAccount => 'Crear cuenta nueva';
+
+  @override
+  String get loginWithEmail => 'Entrar con email';
+
+  @override
+  String get settingsSecuritySectionTitle => 'Protege mejor tu cuenta';
+
+  @override
+  String get settingsSecurity2FATitle =>
+      'Activa la verificación en dos pasos (2FA) en tu cuenta.';
+
+  @override
+  String get settingsSecurityPasswordTitle =>
+      'Usa una contraseña larga y única para PersalOne.';
+
+  @override
+  String get settingsSecurityActivityTitle =>
+      'Revisa de vez en cuando la actividad de inicio de sesión.';
+
+  @override
+  String get settingsSecurityInfoNote =>
+      'Estas funciones se activarán cuando la integración con ZITADEL esté completa.';
+
+  @override
+  String get agentLinkAnalysisTitle => 'Análisis técnico del enlace';
+
+  @override
+  String get agentLinkAnalysisRiskLow => 'Riesgo bajo';
+
+  @override
+  String get agentLinkAnalysisRiskMedium => 'Riesgo medio';
+
+  @override
+  String get agentLinkAnalysisRiskHigh => 'Riesgo alto';
+
+  @override
+  String get agentLinkAnalysisRiskUnknown => 'Riesgo no determinado';
+
+  @override
+  String get agentLinkAnalysisSeeDetails => 'Ver detalles técnicos';
+
+  @override
+  String get agentLinkAnalysisHideDetails => 'Ocultar detalles';
+
+  @override
+  String get agentLinkAnalysisNotesTitle => 'Detalles adicionales';
+
+  @override
+  String get agentLinkAnalysisHttpsLabel => 'Conexión segura (HTTPS)';
+
+  @override
+  String get agentLinkAnalysisRedirectsLabel => 'Redirecciones';
+
+  @override
+  String get agentLinkAnalysisDomainAgeLabel => 'Antigüedad del dominio';
+
+  @override
+  String agentLinkAnalysisDomainAgeDays(int days, int years) {
+    return '$days días ($years años aproximadamente)';
+  }
+
+  @override
+  String get agentLinkAnalysisReputationLabel => 'Reputación';
+
+  @override
+  String get agentLinkAnalysisReputationTrusted => 'Confiable';
+
+  @override
+  String get agentLinkAnalysisReputationSuspicious => 'Sospechoso';
+
+  @override
+  String get agentLinkAnalysisReputationUnknown => 'No determinada';
 }

@@ -497,131 +497,232 @@ class AppLocalizationsEn extends AppLocalizations {
   String get consentSecondaryButton => 'See more details';
 
   @override
-  String get checklistCenterTitle => 'Centro de revisiones';
+  String get checklistCenterTitle => 'Review Center';
 
   @override
   String get checklistCenterIntro =>
-      'Usa este espacio para revisar casos y dejar constancia de tus decisiones.\\nAsí tendrás un registro claro de lo que ocurrió y de cómo actuaste.';
+      'Use this space to review cases and record your decisions.\\nThis way you\'ll have a clear record of what happened and how you acted.';
 
   @override
-  String get checklistStartNewReview => 'Empezar nueva revisión';
+  String get checklistStartNewReview => 'Start new review';
 
   @override
-  String get checklistRecentReviews => 'Revisiones recientes';
+  String get checklistRecentReviews => 'Recent reviews';
 
   @override
-  String get checklistNoReviewsYet => 'Sin revisiones todavía';
+  String get checklistNoReviewsYet => 'No reviews yet';
 
   @override
   String get checklistNoReviewsHelp =>
-      'Pulsa \'Empezar nueva revisión\' para crear tu primera revisión.';
+      'Tap \'Start new review\' to create your first review.';
 
   @override
-  String get reviewNewTitle => 'Nueva revisión';
+  String get reviewNewTitle => 'New review';
 
   @override
-  String get reviewWhatToReview => '¿Qué quieres revisar?';
+  String get reviewWhatToReview => 'What do you want to review?';
 
   @override
-  String get reviewCaseType => 'Tipo de caso';
+  String get reviewCaseType => 'Case type';
 
   @override
-  String get reviewCaseTypeSuspiciousMessage => 'Mensaje sospechoso';
+  String get reviewCaseTypeSuspiciousMessage => 'Suspicious message';
 
   @override
-  String get reviewCaseTypeCallOrVoice => 'Llamada o nota de voz';
+  String get reviewCaseTypeCallOrVoice => 'Call or voice note';
 
   @override
-  String get reviewCaseTypeLinkOrWebsite => 'Enlace o página web';
+  String get reviewCaseTypeLinkOrWebsite => 'Link or website';
 
   @override
-  String get reviewCaseTypePhoneSettings => 'Ajuste de tu teléfono';
+  String get reviewCaseTypePhoneSettings => 'Phone setting';
 
   @override
-  String get reviewCaseTypeOther => 'Otro';
+  String get reviewCaseTypeOther => 'Other';
 
   @override
-  String get reviewOptionalTitle => 'Título del caso (opcional)';
+  String get reviewOptionalTitle => 'Case title (optional)';
 
   @override
-  String get reviewTitleHint => 'Por ejemplo: SMS banco Caixa 03/12';
+  String get reviewTitleHint => 'For example: Bank SMS Caixa 03/12';
 
   @override
-  String get reviewSignalsReviewed => 'Señales revisadas';
+  String get reviewSignalsReviewed => 'Signals reviewed';
 
   @override
-  String get reviewChecklistHelp => 'Marca las señales que has identificado';
+  String get reviewChecklistHelp => 'Check the signals you\'ve identified';
 
   @override
-  String get reviewRiskAndDecision => 'Riesgo y decisión';
+  String get reviewRiskAndDecision => 'Risk and decision';
 
   @override
-  String get reviewHowDoYouSeeRisk => '¿Cómo ves el riesgo?';
+  String get reviewHowDoYouSeeRisk => 'How do you see the risk?';
 
   @override
-  String get reviewRiskLow => 'Bajo';
+  String get reviewRiskLow => 'Low';
 
   @override
-  String get reviewRiskMedium => 'Medio';
+  String get reviewRiskMedium => 'Medium';
 
   @override
-  String get reviewRiskHigh => 'Alto';
+  String get reviewRiskHigh => 'High';
 
   @override
-  String get reviewWhatDidYouDecide => '¿Qué has decidido hacer?';
+  String get reviewWhatDidYouDecide => 'What did you decide to do?';
 
   @override
   String get reviewDecisionHint =>
-      'Por ejemplo: No pulso el enlace y llamaré al banco mañana';
+      'For example: I won\'t click the link and I\'ll call the bank tomorrow';
 
   @override
   String get reviewDecisionHelperText =>
-      'Describe brevemente qué acción vas a tomar o ya has tomado';
+      'Briefly describe what action you\'re going to take or have already taken';
 
   @override
-  String get reviewSaveReview => 'Guardar revisión';
+  String get reviewSaveReview => 'Save review';
 
   @override
-  String get reviewSummaryTitle => 'Resumen de revisión';
+  String get reviewSummaryTitle => 'Review summary';
 
   @override
-  String get reviewDate => 'Fecha';
+  String get reviewDate => 'Date';
 
   @override
-  String get reviewRiskPerceived => 'Riesgo percibido';
+  String get reviewRiskPerceived => 'Perceived risk';
 
   @override
-  String get reviewDecisionTaken => 'Decisión tomada';
+  String get reviewDecisionTaken => 'Decision taken';
 
   @override
-  String get reviewNoDecisionRecorded => 'Sin decisión registrada';
+  String get reviewNoDecisionRecorded => 'No decision recorded';
 
   @override
-  String get reviewExportActions => 'Exportar informe';
+  String get reviewExportActions => 'Export report';
 
   @override
-  String get reviewCopyReport => 'Copiar informe';
+  String get reviewCopyReport => 'Copy report';
 
   @override
-  String get reviewPrepareEmail => 'Preparar email con el informe';
+  String get reviewPrepareEmail => 'Prepare email with report';
 
   @override
-  String get reviewCopiedToClipboard => 'Informe copiado al portapapeles';
+  String get reviewCopiedToClipboard => 'Report copied to clipboard';
 
   @override
   String get reviewEmailNotAvailableYet =>
-      'Función de email en desarrollo. El informe se ha copiado al portapapeles.';
+      'Email function in development. Report has been copied to clipboard.';
 
   @override
   String get reviewDeleteConfirm =>
-      '¿Seguro que quieres eliminar esta revisión?';
+      'Are you sure you want to delete this review?';
 
   @override
-  String get delete => 'Eliminar';
+  String get delete => 'Delete';
 
   @override
-  String get cancel => 'Cancelar';
+  String get cancel => 'Cancel';
 
   @override
-  String get save => 'Guardar';
+  String get save => 'Save';
+
+  @override
+  String get loginHeaderTitle => 'Access your PersalOne account';
+
+  @override
+  String get loginSecuritySubtitle =>
+      'We protect your access with strong passwords and optional additional verification.';
+
+  @override
+  String get loginSocialLoginSection => 'Continue with';
+
+  @override
+  String get loginWithGoogle => 'Continue with Google';
+
+  @override
+  String get loginWithGitHub => 'Continue with GitHub';
+
+  @override
+  String get loginWithLinkedIn => 'Continue with LinkedIn';
+
+  @override
+  String get loginOrDivider => 'or use your email';
+
+  @override
+  String get loginPasswordHint =>
+      'Use a password of at least 14 characters—a long passphrase only you remember works best.';
+
+  @override
+  String get loginCreateAccount => 'Create new account';
+
+  @override
+  String get loginWithEmail => 'Sign in with email';
+
+  @override
+  String get settingsSecuritySectionTitle => 'Better protect your account';
+
+  @override
+  String get settingsSecurity2FATitle =>
+      'Enable two-factor authentication (2FA) on your account.';
+
+  @override
+  String get settingsSecurityPasswordTitle =>
+      'Use a long, unique password for PersalOne.';
+
+  @override
+  String get settingsSecurityActivityTitle =>
+      'Review your login activity from time to time.';
+
+  @override
+  String get settingsSecurityInfoNote =>
+      'These features will be activated when the ZITADEL integration is complete.';
+
+  @override
+  String get agentLinkAnalysisTitle => 'Technical link analysis';
+
+  @override
+  String get agentLinkAnalysisRiskLow => 'Low risk';
+
+  @override
+  String get agentLinkAnalysisRiskMedium => 'Medium risk';
+
+  @override
+  String get agentLinkAnalysisRiskHigh => 'High risk';
+
+  @override
+  String get agentLinkAnalysisRiskUnknown => 'Risk not determined';
+
+  @override
+  String get agentLinkAnalysisSeeDetails => 'Show technical details';
+
+  @override
+  String get agentLinkAnalysisHideDetails => 'Hide details';
+
+  @override
+  String get agentLinkAnalysisNotesTitle => 'Additional details';
+
+  @override
+  String get agentLinkAnalysisHttpsLabel => 'Secure connection (HTTPS)';
+
+  @override
+  String get agentLinkAnalysisRedirectsLabel => 'Redirects';
+
+  @override
+  String get agentLinkAnalysisDomainAgeLabel => 'Domain age';
+
+  @override
+  String agentLinkAnalysisDomainAgeDays(int days, int years) {
+    return '$days days (approximately $years years)';
+  }
+
+  @override
+  String get agentLinkAnalysisReputationLabel => 'Reputation';
+
+  @override
+  String get agentLinkAnalysisReputationTrusted => 'Trusted';
+
+  @override
+  String get agentLinkAnalysisReputationSuspicious => 'Suspicious';
+
+  @override
+  String get agentLinkAnalysisReputationUnknown => 'Not determined';
 }

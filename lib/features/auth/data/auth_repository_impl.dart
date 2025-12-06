@@ -13,6 +13,8 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   AuthSession? get currentSession => _currentSession;
+  @override
+  bool get isAuthenticated => _currentSession?.isValid ?? false;
 
   @override
   Future<AuthSession> login({

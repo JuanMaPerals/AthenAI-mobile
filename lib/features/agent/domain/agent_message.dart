@@ -1,3 +1,5 @@
+import 'ally_message_response_v2.dart';
+
 enum AgentSender {
   user,
   agent,
@@ -9,6 +11,7 @@ class AgentMessage {
   final AgentSender sender;
   final DateTime createdAt;
   final String? riskLevel; // "low" | "medium" | "high" | null
+  final List<LinkAnalysis> linkAnalysis; // Link security analysis from backend
 
   AgentMessage({
     required this.id,
@@ -16,6 +19,7 @@ class AgentMessage {
     required this.sender,
     DateTime? createdAt,
     this.riskLevel,
+    this.linkAnalysis = const [],
   }) : createdAt = createdAt ?? DateTime.now();
 
   // Factory constructor from JSON (API response)
@@ -26,6 +30,7 @@ class AgentMessage {
       sender: sender,
       createdAt: DateTime.parse(json['created_at'] as String),
       riskLevel: json['risk_level'] as String?,
+      linkAnalysis: const [],
     );
   }
 

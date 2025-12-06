@@ -52,13 +52,14 @@ class AgentRepositoryImpl implements AgentRepository {
         _currentConversationId = response.conversationId;
       }
 
-      // Create AgentMessage from the reply
-      // TODO: In future, we'll want to pass the full analysis data to UI
+      // Create AgentMessage from the reply with full analysis data
       final agentMessage = AgentMessage(
         id: DateTime.now().microsecondsSinceEpoch.toString(),
         text: replyText,
         sender: AgentSender.agent,
         createdAt: metadata.generatedAt,
+        riskLevel: response.analysis?.classification.riskLevel,
+        linkAnalysis: response.linkAnalysis,
       );
 
       return agentMessage;

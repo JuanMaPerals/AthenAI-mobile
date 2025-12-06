@@ -599,5 +599,78 @@
   "settingsSecurityInfoNote": "Estas funciones se activarán cuando la integración con ZITADEL esté completa.",
   "@settingsSecurityInfoNote": {
     "description": "Informational note that 2FA features are coming soon"
+  },
+
+  "agentLinkAnalysisTitle": "Análisis técnico del enlace",
+  "@agentLinkAnalysisTitle": {
+    "description": "Title for link analysis card"
+  },
+  "agentLinkAnalysisRiskLow": "Riesgo bajo",
+  "@agentLinkAnalysisRiskLow": {
+    "description": "Low risk level label"
+  },
+  "agentLinkAnalysisRiskMedium": "Riesgo medio",
+  "@agentLinkAnalysisRiskMedium": {
+    "description": "Medium risk level label"
+  },
+  "agentLinkAnalysisRiskHigh": "Riesgo alto",
+  "@agentLinkAnalysisRiskHigh": {
+    "description": "High risk level label"
+  },
+  "agentLinkAnalysisRiskUnknown": "Riesgo no determinado",
+  "@agentLinkAnalysisRiskUnknown": {
+    "description": "Unknown risk level label"
+  },
+  "agentLinkAnalysisSeeDetails": "Ver detalles técnicos",
+  "@agentLinkAnalysisSeeDetails": {
+    "description": "Button to show technical details"
+  },
+  "agentLinkAnalysisHideDetails": "Ocultar detalles",
+  "@agentLinkAnalysisHideDetails": {
+    "description": "Button to hide technical details"
+  },
+  "agentLinkAnalysisNotesTitle": "Detalles adicionales",
+  "@agentLinkAnalysisNotesTitle": {
+    "description": "Title for additional notes section"
+  },
+  "agentLinkAnalysisHttpsLabel": "Conexión segura (HTTPS)",
+  "@agentLinkAnalysisHttpsLabel": {
+    "description": "Label for HTTPS status"
+  },
+  "agentLinkAnalysisRedirectsLabel": "Redirecciones",
+  "@agentLinkAnalysisRedirectsLabel": {
+    "description": "Label for redirects count"
+  },
+  "agentLinkAnalysisDomainAgeLabel": "Antigüedad del dominio",
+  "@agentLinkAnalysisDomainAgeLabel": {
+    "description": "Label for domain age"
+  },
+  "agentLinkAnalysisDomainAgeDays": "{days} días ({years} años aproximadamente)",
+  "@agentLinkAnalysisDomainAgeDays": {
+    "description": "Domain age in days and years",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      },
+      "years": {
+        "type": "int"
+      }
+    }
+  },
+  "agentLinkAnalysisReputationLabel": "Reputación",
+  "@agentLinkAnalysisReputationLabel": {
+    "description": "Label for reputation status"
+  },
+  "agentLinkAnalysisReputationTrusted": "Confiable",
+  "@agentLinkAnalysisReputationTrusted": {
+    "description": "Trusted reputation label"
+  },
+  "agentLinkAnalysisReputationSuspicious": "Sospechoso",
+  "@agentLinkAnalysisReputationSuspicious": {
+    "description": "Suspicious reputation label"
+  },
+  "agentLinkAnalysisReputationUnknown": "No determinada",
+  "@agentLinkAnalysisReputationUnknown": {
+    "description": "Unknown reputation label"
   }
 }

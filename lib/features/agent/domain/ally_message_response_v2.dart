@@ -5,6 +5,7 @@ class AllyMessageResponseV2 {
   final String responseId;
   final String reply;
   final AllyAnalysisResult? analysis;
+  final List<LinkAnalysis> linkAnalysis;
   final String? conversationId;
   final AllyMetadata metadata;
 
@@ -12,6 +13,7 @@ class AllyMessageResponseV2 {
     required this.responseId,
     required this.reply,
     this.analysis,
+    this.linkAnalysis = const [],
     this.conversationId,
     required this.metadata,
   });
@@ -24,6 +26,10 @@ class AllyMessageResponseV2 {
         analysis: json['analysis'] != null
             ? AllyAnalysisResult.fromJson(json['analysis'] as Map<String, dynamic>)
             : null,
+        linkAnalysis: (json['linkAnalysis'] as List<dynamic>?)
+                ?.map((e) => LinkAnalysis.fromJson(e as Map<String, dynamic>))
+                .toList() ??
+            [],
         conversationId: json['conversationId'] as String?,
         metadata: AllyMetadata.fromJson(json['metadata'] as Map<String, dynamic>? ?? {}),
       );
@@ -33,6 +39,7 @@ class AllyMessageResponseV2 {
         responseId: '',
         reply: json['reply'] as String? ?? 'Error al procesar la respuesta',
         analysis: null,
+        linkAnalysis: const [],
         conversationId: null,
         metadata: AllyMetadata(receivedLength: 0, hasContext: false, generatedAt: DateTime.now()),
       );
@@ -347,6 +354,83 @@ class AllyMetadata {
       generatedAt: json['generatedAt'] != null
           ? DateTime.tryParse(json['generatedAt'] as String) ?? DateTime.now()
           : DateTime.now(),
+    );
+  }
+}
+
+/// Risk level for link analysis
+enum LinkRiskLevel {
+  low,
+  medium,
+  high,
+  unknown;
+
+  static LinkRiskLevel fromString(String value) {
+    switch (value.toLowerCase()) {
+      case 'low':
+        return LinkRiskLevel.low;
+      case 'medium':
+        return LinkRiskLevel.medium;
+      case 'high':
+        return LinkRiskLevel.high;
+      default:
+        return LinkRiskLevel.unknown;
+    }
+  }
+}
+
+/// Technical details from link analysis
+class LinkTechnicalDetails {
+  final bool hasHttps;
+  final int redirects;
+  final int? domainAgeDays;
+  final String? reputation; // unknown, suspicious, trusted
+  final List<String> notes;
+
+  const LinkTechnicalDetails({
+    required this.hasHttps,
+    required this.redirects,
+    this.domainAgeDays,
+    this.reputation,
+    this.notes = const [],
+  });
+
+  factory LinkTechnicalDetails.fromJson(Map<String, dynamic> json) {
+    return LinkTechnicalDetails(
+      hasHttps: json['hasHttps'] as bool? ?? false,
+      redirects: json['redirects'] as int? ?? 0,
+      domainAgeDays: json['domainAgeDays'] as int?,
+      reputation: json['reputation'] as String?,
+      notes: (json['notes'] as List<dynamic>?)?.map((e) => e as String).toList() ?? [],
+    );
+  }
+}
+
+/// Link analysis result
+class LinkAnalysis {
+  final String url;
+  final String displayHost;
+  final LinkRiskLevel riskLevel;
+  final String summary;
+  final LinkTechnicalDetails? technicalDetails;
+
+  const LinkAnalysis({
+    required this.url,
+    required this.displayHost,
+    required this.riskLevel,
+    required this.summary,
+    this.technicalDetails,
+  });
+
+  factory LinkAnalysis.fromJson(Map<String, dynamic> json) {
+    return LinkAnalysis(
+      url: json['url'] as String? ?? '',
+      displayHost: json['displayHost'] as String? ?? '',
+      riskLevel: LinkRiskLevel.fromString(json['riskLevel'] as String? ?? 'unknown'),
+      summary: json['summary'] as String? ?? '',
+      technicalDetails: json['technicalDetails'] != null
+          ? LinkTechnicalDetails.fromJson(json['technicalDetails'] as Map<String, dynamic>)
+          : null,
     );
   }
 }

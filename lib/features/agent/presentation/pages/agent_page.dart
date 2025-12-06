@@ -9,6 +9,7 @@ import '../../../auth/presentation/pages/login_page.dart';
 import '../../../home/presentation/pages/home_page.dart';
 import '../../../../core/di/service_locator.dart';
 import '../../../../core/widgets/beta_banner.dart';
+import '../widgets/ally_v2_widgets.dart';
 
 class AgentPage extends StatefulWidget {
   static const String routeName = '/agent';
@@ -328,31 +329,47 @@ class _AgentPageState extends State<AgentPage> {
                         final msg = _messages[index];
                         final isUser = msg.sender == AgentSender.user;
 
-                        return Align(
-                          alignment:
-                              isUser ? Alignment.centerRight : Alignment.centerLeft,
-                          child: Container(
-                            margin: const EdgeInsets.symmetric(vertical: 4),
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 14,
-                              vertical: 10,
-                            ),
-                            constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width * 0.75,
-                            ),
-                            decoration: BoxDecoration(
-                              color: isUser
-                                  ? scheme.primary
-                                  : scheme.primary.withValues(alpha: 0.07),
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                            child: Text(
-                              msg.text,
-                              style: TextStyle(
-                                color: isUser ? Colors.white : Colors.black87,
+                        return Column(
+                          crossAxisAlignment:
+                              isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+                          children: [
+                            Align(
+                              alignment:
+                                  isUser ? Alignment.centerRight : Alignment.centerLeft,
+                              child: Container(
+                                margin: const EdgeInsets.symmetric(vertical: 4),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 14,
+                                  vertical: 10,
+                                ),
+                                constraints: BoxConstraints(
+                                  maxWidth: MediaQuery.of(context).size.width * 0.75,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: isUser
+                                      ? scheme.primary
+                                      : scheme.primary.withValues(alpha: 0.07),
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Text(
+                                  msg.text,
+                                  style: TextStyle(
+                                    color: isUser ? Colors.white : Colors.black87,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
+                            // Show link analysis cards for agent messages
+                            if (!isUser && msg.linkAnalysis.isNotEmpty) ...[
+                              const SizedBox(height: 8),
+                              ...msg.linkAnalysis.map(
+                                (linkAnalysis) => Padding(
+                                  padding: const EdgeInsets.only(bottom: 8),
+                                  child: LinkAnalysisCard(linkAnalysis: linkAnalysis),
+                                ),
+                              ),
+                            ],
+                          ],
                         );
                       },
                     ),

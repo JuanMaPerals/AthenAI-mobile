@@ -43,5 +43,5 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Generated localization files
-lib/l10n/
+# Generated localization files (keep .arb source files)
+lib/l10n/*.dart

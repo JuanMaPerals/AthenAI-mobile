@@ -81,9 +81,14 @@ class _SettingsPageState extends State<SettingsPage> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          // Profile section (NEW)
+          // Profile section
           _ProfileSection(),
-          
+
+          const SizedBox(height: 24),
+
+          // Security section (NEW)
+          _SecuritySection(),
+
           const SizedBox(height: 24),
 
           // Onboarding / User Mode configuration
@@ -256,6 +261,139 @@ String _mapPlanToLabel(String plan, AppLocalizations l10n) {
     default:
       // Fallback: show the raw plan but keep it calm and human
       return plan;
+  }
+}
+
+/// Security recommendations section (2FA, passwords, etc.)
+class _SecuritySection extends StatelessWidget {
+  const _SecuritySection();
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
+    return Card(
+      elevation: 1,
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  Icons.security_outlined,
+                  color: scheme.primary,
+                  size: 24,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    l10n.settingsSecuritySectionTitle,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: scheme.primary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+
+            // 2FA recommendation
+            _SecurityBullet(
+              icon: Icons.verified_user_outlined,
+              text: l10n.settingsSecurity2FATitle,
+            ),
+
+            const SizedBox(height: 12),
+
+            // Strong password recommendation
+            _SecurityBullet(
+              icon: Icons.password_outlined,
+              text: l10n.settingsSecurityPasswordTitle,
+            ),
+
+            const SizedBox(height: 12),
+
+            // Login activity recommendation
+            _SecurityBullet(
+              icon: Icons.history_outlined,
+              text: l10n.settingsSecurityActivityTitle,
+            ),
+
+            const SizedBox(height: 16),
+
+            // Info note about future implementation
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: scheme.primaryContainer.withValues(alpha: 0.3),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.info_outline,
+                    size: 18,
+                    color: scheme.primary,
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      l10n.settingsSecurityInfoNote,
+                      style: theme.textTheme.bodySmall?.copyWith(
+                        color: scheme.onSurface.withValues(alpha: 0.7),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Security bullet point widget
+class _SecurityBullet extends StatelessWidget {
+  final IconData icon;
+  final String text;
+
+  const _SecurityBullet({
+    required this.icon,
+    required this.text,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(
+          icon,
+          size: 20,
+          color: scheme.primary.withValues(alpha: 0.7),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            text,
+            style: theme.textTheme.bodyMedium?.copyWith(
+              color: scheme.onSurface.withValues(alpha: 0.85),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
 

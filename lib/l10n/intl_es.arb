@@ -538,5 +538,66 @@
   
   "delete": "Eliminar",
   "cancel": "Cancelar",
-  "save": "Guardar"
+  "save": "Guardar",
+
+  "loginHeaderTitle": "Accede a tu cuenta PersalOne",
+  "@loginHeaderTitle": {
+    "description": "Main header title on login page"
+  },
+  "loginSecuritySubtitle": "Protegemos tu acceso con contraseñas robustas y verificación adicional opcional.",
+  "@loginSecuritySubtitle": {
+    "description": "Security-focused subtitle on login page"
+  },
+  "loginSocialLoginSection": "Continuar con",
+  "@loginSocialLoginSection": {
+    "description": "Section title for social login options"
+  },
+  "loginWithGoogle": "Continuar con Google",
+  "@loginWithGoogle": {
+    "description": "Google social login button"
+  },
+  "loginWithGitHub": "Continuar con GitHub",
+  "@loginWithGitHub": {
+    "description": "GitHub social login button"
+  },
+  "loginWithLinkedIn": "Continuar con LinkedIn",
+  "@loginWithLinkedIn": {
+    "description": "LinkedIn social login button"
+  },
+  "loginOrDivider": "o usa tu email",
+  "@loginOrDivider": {
+    "description": "Divider text between social login and email login"
+  },
+  "loginPasswordHint": "Usa una contraseña de al menos 14 caracteres, mejor una frase larga que solo tú recuerdes.",
+  "@loginPasswordHint": {
+    "description": "Hint text for strong password requirements"
+  },
+  "loginCreateAccount": "Crear cuenta nueva",
+  "@loginCreateAccount": {
+    "description": "Create new account button"
+  },
+  "loginWithEmail": "Entrar con email",
+  "@loginWithEmail": {
+    "description": "Email login button label"
+  },
+  "settingsSecuritySectionTitle": "Protege mejor tu cuenta",
+  "@settingsSecuritySectionTitle": {
+    "description": "Security section title in settings"
+  },
+  "settingsSecurity2FATitle": "Activa la verificación en dos pasos (2FA) en tu cuenta.",
+  "@settingsSecurity2FATitle": {
+    "description": "2FA recommendation in settings"
+  },
+  "settingsSecurityPasswordTitle": "Usa una contraseña larga y única para PersalOne.",
+  "@settingsSecurityPasswordTitle": {
+    "description": "Password recommendation in settings"
+  },
+  "settingsSecurityActivityTitle": "Revisa de vez en cuando la actividad de inicio de sesión.",
+  "@settingsSecurityActivityTitle": {
+    "description": "Login activity recommendation in settings"
+  },
+  "settingsSecurityInfoNote": "Estas funciones se activarán cuando la integración con ZITADEL esté completa.",
+  "@settingsSecurityInfoNote": {
+    "description": "Informational note that 2FA features are coming soon"
+  }
 }

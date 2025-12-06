@@ -33,6 +33,16 @@ class AuthApiService {
   })  : _client = client ?? http.Client(),
         _baseUrl = baseUrl;
 
+  // ===== TOKEN STORAGE POLICY =====
+  // IMPORTANT: Tokens are stored in MEMORY ONLY (AuthRepositoryImpl._currentSession)
+  // DO NOT store tokens in SharedPreferences or any persistent storage
+  // without explicit security review and encryption implementation.
+  //
+  // Future improvements may include:
+  // - Secure enclave storage on mobile devices
+  // - Encrypted token storage with biometric unlock
+  // - Token refresh with rotation
+
   Future<AuthSession> login({
     required String email,
     required String password,
@@ -119,4 +129,42 @@ class AuthApiService {
       );
     }
   }
+
+  // ===== FUTURE: SOCIAL LOGIN INTEGRATION =====
+  // These methods will be implemented when ZITADEL OAuth flow is ready on the backend
+  //
+  // Social login flow (to be implemented):
+  // 1. Flutter calls `initiateSocialLogin(provider)` -> receives authorization URL
+  // 2. Flutter opens URL in secure browser/webview
+  // 3. User authenticates with social provider (Google/GitHub/LinkedIn)
+  // 4. ZITADEL redirects back to app with authorization code
+  // 5. Flutter calls `completeSocialLogin(code)` -> receives tokens
+  //
+  // Example future implementation:
+  //
+  // Future<String> initiateSocialLogin(String provider) async {
+  //   final uri = Uri.parse('$_baseUrl/auth/oauth/initiate');
+  //   final response = await _client.post(uri, body: jsonEncode({'provider': provider}));
+  //   final json = jsonDecode(response.body);
+  //   return json['authorizationUrl'] as String; // URL to open in browser
+  // }
+  //
+  // Future<AuthSession> completeSocialLogin(String authorizationCode) async {
+  //   final uri = Uri.parse('$_baseUrl/auth/oauth/callback');
+  //   final response = await _client.post(uri, body: jsonEncode({'code': authorizationCode}));
+  //   // Parse and return AuthSession with tokens
+  // }
+
+  // ===== FUTURE: TOKEN REFRESH =====
+  // To be implemented when backend supports refresh token rotation
+  //
+  // Future<AuthSession> refreshToken(String refreshToken) async {
+  //   final uri = Uri.parse('$_baseUrl/auth/refresh');
+  //   final response = await _client.post(
+  //     uri,
+  //     headers: {'Content-Type': 'application/json'},
+  //     body: jsonEncode({'refreshToken': refreshToken}),
+  //   );
+  //   // Parse and return new AuthSession
+  // }
 }

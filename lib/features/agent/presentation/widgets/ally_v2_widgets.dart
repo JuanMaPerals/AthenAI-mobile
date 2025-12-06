@@ -458,3 +458,331 @@ class ConditionalGuidancePanel extends StatelessWidget {
     );
   }
 }
+
+/// Link analysis card showing technical analysis of URLs found in the message
+class LinkAnalysisCard extends StatefulWidget {
+  final LinkAnalysis linkAnalysis;
+
+  const LinkAnalysisCard({super.key, required this.linkAnalysis});
+
+  @override
+  State<LinkAnalysisCard> createState() => _LinkAnalysisCardState();
+}
+
+class _LinkAnalysisCardState extends State<LinkAnalysisCard> {
+  bool _showDetails = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final l10n = AppLocalizations.of(context)!;
+
+    // Risk level colors and icons
+    Color riskColor;
+    String riskLabel;
+    IconData riskIcon;
+
+    switch (widget.linkAnalysis.riskLevel) {
+      case LinkRiskLevel.high:
+        riskColor = scheme.error;
+        riskLabel = l10n.agentLinkAnalysisRiskHigh;
+        riskIcon = Icons.warning;
+        break;
+      case LinkRiskLevel.medium:
+        riskColor = Colors.orange;
+        riskLabel = l10n.agentLinkAnalysisRiskMedium;
+        riskIcon = Icons.info_outline;
+        break;
+      case LinkRiskLevel.low:
+        riskColor = Colors.green.shade700;
+        riskLabel = l10n.agentLinkAnalysisRiskLow;
+        riskIcon = Icons.check_circle_outline;
+        break;
+      case LinkRiskLevel.unknown:
+      default:
+        riskColor = Colors.grey.shade600;
+        riskLabel = l10n.agentLinkAnalysisRiskUnknown;
+        riskIcon = Icons.help_outline;
+    }
+
+    return Card(
+      margin: const EdgeInsets.only(bottom: 16),
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Title
+            Row(
+              children: [
+                Icon(
+                  Icons.link,
+                  color: scheme.primary,
+                  size: 24,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    l10n.agentLinkAnalysisTitle,
+                    style: theme.textTheme.titleMedium?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: scheme.primary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 16),
+
+            // Domain
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: scheme.surfaceContainerHighest,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.public,
+                    size: 18,
+                    color: scheme.onSurface.withValues(alpha: 0.7),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      widget.linkAnalysis.displayHost,
+                      style: theme.textTheme.bodyMedium?.copyWith(
+                        fontFamily: 'monospace',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            // Risk badge
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: riskColor.withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: riskColor.withValues(alpha: 0.3),
+                  width: 1,
+                ),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(riskIcon, color: riskColor, size: 20),
+                  const SizedBox(width: 8),
+                  Text(
+                    riskLabel,
+                    style: theme.textTheme.bodyMedium?.copyWith(
+                      color: riskColor,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            // Summary
+            Text(
+              widget.linkAnalysis.summary,
+              style: theme.textTheme.bodyMedium,
+            ),
+
+            // Technical details section (expandable)
+            if (widget.linkAnalysis.technicalDetails != null) ...[
+              const SizedBox(height: 16),
+              TextButton.icon(
+                onPressed: () {
+                  setState(() {
+                    _showDetails = !_showDetails;
+                  });
+                },
+                icon: Icon(
+                  _showDetails ? Icons.expand_less : Icons.expand_more,
+                  size: 20,
+                ),
+                label: Text(
+                  _showDetails
+                      ? l10n.agentLinkAnalysisHideDetails
+                      : l10n.agentLinkAnalysisSeeDetails,
+                ),
+              ),
+
+              if (_showDetails) _buildTechnicalDetails(context),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTechnicalDetails(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final l10n = AppLocalizations.of(context)!;
+    final details = widget.linkAnalysis.technicalDetails!;
+
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: scheme.surfaceContainerHighest.withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(
+          color: scheme.outline.withValues(alpha: 0.2),
+        ),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // HTTPS
+          _buildDetailRow(
+            context,
+            l10n.agentLinkAnalysisHttpsLabel,
+            details.hasHttps ? 'Sí' : 'No',
+            details.hasHttps ? Colors.green : Colors.red,
+          ),
+
+          const SizedBox(height: 8),
+
+          // Redirects
+          _buildDetailRow(
+            context,
+            l10n.agentLinkAnalysisRedirectsLabel,
+            details.redirects.toString(),
+            null,
+          ),
+
+          // Domain age
+          if (details.domainAgeDays != null) ...[
+            const SizedBox(height: 8),
+            _buildDetailRow(
+              context,
+              l10n.agentLinkAnalysisDomainAgeLabel,
+              l10n.agentLinkAnalysisDomainAgeDays(
+                details.domainAgeDays!,
+                (details.domainAgeDays! / 365).floor(),
+              ),
+              null,
+            ),
+          ],
+
+          // Reputation
+          if (details.reputation != null) ...[
+            const SizedBox(height: 8),
+            _buildDetailRow(
+              context,
+              l10n.agentLinkAnalysisReputationLabel,
+              _getReputationLabel(l10n, details.reputation!),
+              _getReputationColor(details.reputation!),
+            ),
+          ],
+
+          // Notes
+          if (details.notes.isNotEmpty) ...[
+            const SizedBox(height: 12),
+            Text(
+              l10n.agentLinkAnalysisNotesTitle,
+              style: theme.textTheme.bodySmall?.copyWith(
+                fontWeight: FontWeight.w600,
+                color: scheme.onSurface.withValues(alpha: 0.7),
+              ),
+            ),
+            const SizedBox(height: 8),
+            ...details.notes.map(
+              (note) => Padding(
+                padding: const EdgeInsets.only(bottom: 4),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '• ',
+                      style: theme.textTheme.bodySmall,
+                    ),
+                    Expanded(
+                      child: Text(
+                        note,
+                        style: theme.textTheme.bodySmall,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDetailRow(
+    BuildContext context,
+    String label,
+    String value,
+    Color? valueColor,
+  ) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 140,
+          child: Text(
+            '$label:',
+            style: theme.textTheme.bodySmall?.copyWith(
+              fontWeight: FontWeight.w500,
+              color: scheme.onSurface.withValues(alpha: 0.7),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            value,
+            style: theme.textTheme.bodySmall?.copyWith(
+              color: valueColor ?? scheme.onSurface,
+              fontWeight: valueColor != null ? FontWeight.w600 : null,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  String _getReputationLabel(AppLocalizations l10n, String reputation) {
+    switch (reputation.toLowerCase()) {
+      case 'trusted':
+        return l10n.agentLinkAnalysisReputationTrusted;
+      case 'suspicious':
+        return l10n.agentLinkAnalysisReputationSuspicious;
+      default:
+        return l10n.agentLinkAnalysisReputationUnknown;
+    }
+  }
+
+  Color _getReputationColor(String reputation) {
+    switch (reputation.toLowerCase()) {
+      case 'trusted':
+        return Colors.green;
+      case 'suspicious':
+        return Colors.red;
+      default:
+        return Colors.grey;
+    }
+  }
+}

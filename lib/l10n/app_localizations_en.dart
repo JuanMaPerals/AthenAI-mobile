@@ -30,11 +30,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get homeHeroTitle =>
-      'AI that protects your online decisions. You set the limits.';
+      'Your AI agent to review messages, links and sensitive access.';
 
   @override
   String get homeHeroSubtitle =>
-      'PersalOne reviews important links, charges and logins with you. Behind it is a team led by Juan Ma Perals that turns advanced AI into clear, actionable recommendations.';
+      'PersalOne helps you detect signs of fraud and digital risks before you click or make an important decision.';
 
   @override
   String get homeTalkToAgent => 'Talk to my AI agent';
@@ -91,6 +91,10 @@ class AppLocalizationsEn extends AppLocalizations {
       'Reduce visual elements and simplify layout';
 
   @override
+  String get settingsAccessibilityExplanation =>
+      'These settings are designed to adapt to different ways of reading and processing information. You can try them and stick with what feels most comfortable.';
+
+  @override
   String get settingsInfoMessage =>
       'Accessibility settings will be applied in future versions. For now, this screen only demonstrates the functionality.';
 
@@ -106,30 +110,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsWhatCanDoCanItem1 =>
-      'Understand messages or emails that raise doubts.';
+      'Understand messages, emails and notices that raise doubts.';
 
   @override
   String get settingsWhatCanDoCanItem2 =>
-      'Decide what steps to take when something seems off.';
+      'Review links and notices before clicking or responding.';
 
   @override
   String get settingsWhatCanDoCanItem3 =>
-      'Learn gradually to navigate with more security.';
+      'Learn gradually to recognize risk signals.';
 
   @override
   String get settingsWhatCanDoCannotTitle => 'Cannot:';
 
   @override
   String get settingsWhatCanDoCannotItem1 =>
-      'Access your accounts or change anything for you.';
+      'Does not access your accounts or act on your behalf.';
 
   @override
   String get settingsWhatCanDoCannotItem2 =>
-      'It does not replace the police, your bank or official emergency services.';
+      'Does not replace the police, your bank or emergency services.';
 
   @override
   String get settingsWhatCanDoCannotItem3 =>
-      'It is not a tool to spy on someone else\'s phone or to monitor others without their consent.';
+      'Is not a tool to spy on or control other people.';
 
   @override
   String get pricingIndividualSectionTitle => 'For you';
@@ -203,11 +207,11 @@ class AppLocalizationsEn extends AppLocalizations {
   String get pricingPopular => 'Popular';
 
   @override
-  String get agentTitle => 'Your trusted person for all things digital';
+  String get agentTitle => 'Your AI agent against fraud and online scams';
 
   @override
   String get agentIntro =>
-      'Tell us what you see on the screen, what message you received or what\'s worrying you. We\'ll give you clear steps in language that actually makes sense to you.';
+      'Tell me what happened and we\'ll review the situation together.\\nYou can paste the message, link or notice that concerns you. I\'ll help you see the risks and next steps.';
 
   @override
   String get agentInputPlaceholder => 'How can I help you?';
@@ -279,11 +283,15 @@ class AppLocalizationsEn extends AppLocalizations {
       'Your session has expired. Please sign in again.';
 
   @override
-  String get loginDemoMode => 'Try PersalOne in demo mode (offline)';
+  String get loginDemoMode => 'Enter demo mode (no real data)';
+
+  @override
+  String get loginDemoModeDescription =>
+      'You\'ll try the app with a sample profile. No real personal data will be analyzed or saved.';
 
   @override
   String get homeScenarioDeviceSlowSubtitle =>
-      'My phone is slow or behaves strangely';
+      'My phone is slow or works strangely';
 
   @override
   String get settingsProfileSectionTitle => 'Your PersalOne profile';
@@ -493,7 +501,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get checklistCenterIntro =>
-      'Usa este espacio para revisar casos con calma y dejar constancia de tus decisiones.';
+      'Usa este espacio para revisar casos y dejar constancia de tus decisiones.\\nAsí tendrás un registro claro de lo que ocurrió y de cómo actuaste.';
 
   @override
   String get checklistStartNewReview => 'Empezar nueva revisión';

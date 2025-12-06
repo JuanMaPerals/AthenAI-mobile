@@ -242,6 +242,12 @@ abstract class AppLocalizations {
   /// **'Reduce elementos visuales y simplifica el diseño'**
   String get settingsEasyReadingSubtitle;
 
+  /// Explanation text for accessibility settings
+  ///
+  /// In es, this message translates to:
+  /// **'Estos ajustes están pensados para adaptarse a distintas formas de leer y procesar la información. Puedes probarlos y quedarte con lo que te resulte más cómodo.'**
+  String get settingsAccessibilityExplanation;
+
   /// Settings info card message
   ///
   /// In es, this message translates to:
@@ -269,19 +275,19 @@ abstract class AppLocalizations {
   /// First item in can-do list
   ///
   /// In es, this message translates to:
-  /// **'Entender mensajes o emails que te generan dudas.'**
+  /// **'Entender mensajes, correos y avisos que te generan dudas.'**
   String get settingsWhatCanDoCanItem1;
 
   /// Second item in can-do list
   ///
   /// In es, this message translates to:
-  /// **'Decidir qué pasos dar cuando algo te parece raro.'**
+  /// **'Revisar enlaces y avisos antes de hacer clic o responder.'**
   String get settingsWhatCanDoCanItem2;
 
   /// Third item in can-do list
   ///
   /// In es, this message translates to:
-  /// **'Aprender poco a poco a moverte con más seguridad.'**
+  /// **'Aprender poco a poco a reconocer señales de riesgo.'**
   String get settingsWhatCanDoCanItem3;
 
   /// Title for what PersalOne cannot do list
@@ -290,22 +296,22 @@ abstract class AppLocalizations {
   /// **'No puede:'**
   String get settingsWhatCanDoCannotTitle;
 
-  /// Pricing disclaimer message
+  /// First item in cannot-do list
   ///
   /// In es, this message translates to:
-  /// **'Entrar en tus cuentas ni cambiar nada por ti.'**
+  /// **'No entra en tus cuentas ni actúa en tu nombre.'**
   String get settingsWhatCanDoCannotItem1;
 
-  /// Bullet en ajustes: aclarar límites del servicio
+  /// Second item in cannot-do list
   ///
   /// In es, this message translates to:
-  /// **'No sustituye a la policía, a tu banco ni a los servicios oficiales de emergencia.'**
+  /// **'No sustituye a la policía, a tu banco ni a los servicios de emergencia.'**
   String get settingsWhatCanDoCannotItem2;
 
-  /// Bullet en ajustes: no es para espiar móviles ajenos
+  /// Third item in cannot-do list
   ///
   /// In es, this message translates to:
-  /// **'No es una herramienta para espiar el móvil de otra persona ni para controlar a terceros sin su permiso.'**
+  /// **'No es una herramienta para espiar ni controlar a otras personas.'**
   String get settingsWhatCanDoCannotItem3;
 
   /// Individual plans section title
@@ -569,13 +575,19 @@ abstract class AppLocalizations {
   /// Demo/offline mode button label
   ///
   /// In es, this message translates to:
-  /// **'Entrar en modo prueba (sin conexión)'**
+  /// **'Entrar en modo demo (sin datos reales)'**
   String get loginDemoMode;
+
+  /// Demo mode description text
+  ///
+  /// In es, this message translates to:
+  /// **'Probarás la app con un perfil de ejemplo. No se analizarán datos personales reales ni se guardará nada.'**
+  String get loginDemoModeDescription;
 
   /// Device scenario third card navigation message
   ///
   /// In es, this message translates to:
-  /// **'Mi móvil va lento o hace cosas raras'**
+  /// **'Mi móvil va lento o funciona de forma extraña'**
   String get homeScenarioDeviceSlowSubtitle;
 
   /// Profile section title in settings
@@ -953,7 +965,7 @@ abstract class AppLocalizations {
   /// No description provided for @checklistCenterIntro.
   ///
   /// In es, this message translates to:
-  /// **'Usa este espacio para revisar casos con calma y dejar constancia de tus decisiones.'**
+  /// **'Usa este espacio para revisar casos y dejar constancia de tus decisiones.\\nAsí tendrás un registro claro de lo que ocurrió y de cómo actuaste.'**
   String get checklistCenterIntro;
 
   /// No description provided for @checklistStartNewReview.

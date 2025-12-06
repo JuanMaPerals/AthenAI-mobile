@@ -91,6 +91,10 @@ class AppLocalizationsEs extends AppLocalizations {
       'Reduce elementos visuales y simplifica el diseño';
 
   @override
+  String get settingsAccessibilityExplanation =>
+      'Estos ajustes están pensados para adaptarse a distintas formas de leer y procesar la información. Puedes probarlos y quedarte con lo que te resulte más cómodo.';
+
+  @override
   String get settingsInfoMessage =>
       'Los ajustes de accesibilidad se aplicarán en futuras versiones. Por ahora, esta pantalla solo demuestra la funcionalidad.';
 
@@ -106,30 +110,30 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get settingsWhatCanDoCanItem1 =>
-      'Entender mensajes o emails que te generan dudas.';
+      'Entender mensajes, correos y avisos que te generan dudas.';
 
   @override
   String get settingsWhatCanDoCanItem2 =>
-      'Decidir qué pasos dar cuando algo te parece raro.';
+      'Revisar enlaces y avisos antes de hacer clic o responder.';
 
   @override
   String get settingsWhatCanDoCanItem3 =>
-      'Aprender poco a poco a moverte con más seguridad.';
+      'Aprender poco a poco a reconocer señales de riesgo.';
 
   @override
   String get settingsWhatCanDoCannotTitle => 'No puede:';
 
   @override
   String get settingsWhatCanDoCannotItem1 =>
-      'Entrar en tus cuentas ni cambiar nada por ti.';
+      'No entra en tus cuentas ni actúa en tu nombre.';
 
   @override
   String get settingsWhatCanDoCannotItem2 =>
-      'No sustituye a la policía, a tu banco ni a los servicios oficiales de emergencia.';
+      'No sustituye a la policía, a tu banco ni a los servicios de emergencia.';
 
   @override
   String get settingsWhatCanDoCannotItem3 =>
-      'No es una herramienta para espiar el móvil de otra persona ni para controlar a terceros sin su permiso.';
+      'No es una herramienta para espiar ni controlar a otras personas.';
 
   @override
   String get pricingIndividualSectionTitle => 'Para ti';
@@ -279,11 +283,15 @@ class AppLocalizationsEs extends AppLocalizations {
       'Tu sesión ha caducado. Por favor, inicia sesión de nuevo.';
 
   @override
-  String get loginDemoMode => 'Entrar en modo prueba (sin conexión)';
+  String get loginDemoMode => 'Entrar en modo demo (sin datos reales)';
+
+  @override
+  String get loginDemoModeDescription =>
+      'Probarás la app con un perfil de ejemplo. No se analizarán datos personales reales ni se guardará nada.';
 
   @override
   String get homeScenarioDeviceSlowSubtitle =>
-      'Mi móvil va lento o hace cosas raras';
+      'Mi móvil va lento o funciona de forma extraña';
 
   @override
   String get settingsProfileSectionTitle => 'Tu perfil en PersalOne';
@@ -494,7 +502,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get checklistCenterIntro =>
-      'Usa este espacio para revisar casos con calma y dejar constancia de tus decisiones.';
+      'Usa este espacio para revisar casos y dejar constancia de tus decisiones.\\nAsí tendrás un registro claro de lo que ocurrió y de cómo actuaste.';
 
   @override
   String get checklistStartNewReview => 'Empezar nueva revisión';

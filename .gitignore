@@ -43,5 +43,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Generated localization files (keep .arb source files)
-lib/l10n/*.dart
+# Keep generated localization files committed for static analysis and tests
+# They are generated from .arb source files via 'flutter gen-l10n'
+# and need to be available for flutter analyze and flutter test to work correctly
+
+# Ignore backup and broken ARB files
+lib/l10n/*.arb.bak
+lib/l10n/*.arb.broken
